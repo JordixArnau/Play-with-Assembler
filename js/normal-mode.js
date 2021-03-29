@@ -3,9 +3,6 @@ var myOutput = document.getElementById("output-box");
 //Getting the id for the tag where you want to output your number
 var startNumber = 0;
 
-
-/* #### Easy Mode Variables######*/
-
 var myButtonNormal = document.getElementById("game-box-normal");
 
 /* #### Normal Mode Variables######*/
@@ -13,8 +10,6 @@ let oldTarget = document.querySelector('.target-item');
 
 oldTarget.addEventListener('click', normalGame);
 oldTarget.addEventListener('click', addToNumber);
-
-
 
 function addToNumber(){
 	myOutput.innerHTML = `The current number of clicks is: ${1+startNumber++}`;
@@ -49,11 +44,9 @@ function normalGame(){
             matrixBoard[i].classList.add("target-item")
             matrixBoard[i].style.height = randHeight.toString()+"%";
             matrixBoard[i].style.width = randWidth.toString()+"%";
-            matrixBoard[i].innerHTML = '<p id="click-here-text">Click here</p>';
+            matrixBoard[i].innerHTML = '<p class="click-here-text" id="click-here-text">Click here</p>';
             matrixBoard[i].addEventListener('click', normalGame);
             matrixBoard[i].addEventListener('click', addToNumber);
-          
-
         }
     }
  };
