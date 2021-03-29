@@ -19,6 +19,7 @@ function advanceGame(){
     /*Removing target element style for current element*/
     oldTarget.classList.remove("target-item");
     oldTarget.innerHTML = '';
+    oldTarget.removeEventListener('click', advanceGame);
     // oldTarget.removeChild(oldTarget.lastElementChild);
 
     /*Adding target element to the new random element*/
@@ -29,7 +30,8 @@ function advanceGame(){
             matrixBoard[i].classList.add("target-item")
             matrixBoard[i].style.height = randHeight.toString()+"%";
             matrixBoard[i].style.width = randWidth.toString()+"%";
-            matrixBoard[i].innerHTML = '<p id="click-here-text">Click here</p>'
+            matrixBoard[i].innerHTML = '<p id="click-here-text">Click here</p>';
+            matrixBoard[i].addEventListener('click', advanceGame)
         }
     }
  };
