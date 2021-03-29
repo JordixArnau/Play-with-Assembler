@@ -5,7 +5,7 @@ var startNumber = 0;
 
 
 /* #### Easy Mode Variables######*/
-var myButtonEasy = document.getElementById("game-box");
+
 var myButtonNormal = document.getElementById("game-box-normal");
 
 /* #### Normal Mode Variables######*/
@@ -14,10 +14,6 @@ let oldTarget = document.querySelector('.target-item');
 oldTarget.addEventListener('click', normalGame);
 oldTarget.addEventListener('click', addToNumber);
 
-
-
-myButtonEasy.onclick = addToNumber;
-// myButtonNormal.onclick = addToNumber;
 
 
 function addToNumber(){
@@ -43,7 +39,7 @@ function normalGame(){
     oldTarget.innerHTML = '';
     oldTarget.removeEventListener('click', normalGame);
     oldTarget.removeAttribute('id');
-    // oldTarget.removeChild(oldTarget.lastElementChild);
+    
 
     /*Adding target element to the new random element*/
     for (let i = 0; i < matrixBoard.length; i++) {
@@ -56,7 +52,7 @@ function normalGame(){
             matrixBoard[i].innerHTML = '<p id="click-here-text">Click here</p>';
             matrixBoard[i].addEventListener('click', normalGame);
             matrixBoard[i].addEventListener('click', addToNumber);
-            // matrixBoard[i].id = "game-box-normal";
+          
 
         }
     }

@@ -13,14 +13,14 @@ function phase1() {
     document.querySelector('main').appendChild(startTemp.cloneNode(true));
 }
 
-// phase1();
+phase1();
 
 function phase2() {
     let startTemp = document.getElementById('phase2').content;
     document.querySelector('main').appendChild(startTemp.cloneNode(true));
 }
 
-phase2();
+// phase2();
 
 
 
