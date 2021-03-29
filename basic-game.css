@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+#main{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   background-color: antiquewhite;
+}
+#main-box{
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+#output-box{
+    height: 400px;
+    width: 200px;
+    background-color:lightcoral;
+}
+
+#reset-button{
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+    justify-content: center;
+    align-items: center;
+}
+.all-buttons{
+    height: 70px;
+    width: 70px;
+    background-color: black;
+}
+
+
+ 
