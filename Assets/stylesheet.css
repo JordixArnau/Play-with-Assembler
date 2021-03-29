@@ -1,3 +1,5 @@
+/*** GENERAL STYLES ***/
+
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +16,24 @@ body {
     align-items: center;
 }
 
+h2 {
+    margin: 10px 0;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #02123;
+}
+
 /*** HEADER ***/
 
 header {
     width: 100%;
     height: 10vh;
     background-color: #02123C;
+    background-image: url('../gif_background_top.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*** MAIN ***/
@@ -36,12 +50,13 @@ main {
 /*** ASIDE ***/
 
 aside {
-    display: flex;
     width: 20%;
     padding: 10px;
-    height: 60vh;
+    height: 65vh;
     background-color: #C29F13;
     border-radius: 15px;
+    padding: 25px;
+    font-size: 2em;
 }
 
 /*** TEMPLATE DIVS ***/
@@ -63,4 +78,8 @@ footer  {
     width: 100%;
     height: 15vh;
     background-color: #02123C;
+    background-image: url('../gif_background_bottom.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
 }
