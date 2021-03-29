@@ -5,21 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="basic-game.css">
+    <link rel="stylesheet" href="Assets/stylesheet.css">
 </head>
 <body>
+    <header>
+
+    </header>
+
     <main>
-        <div id="main">
-            <div id="main-box">
-            </div>
-            <div id="output-box"></div>
-            <div id="reset-button"><button class="all-buttons" onClick="window.location.reload();"></button></div>
+         <!-- Easy mode of the game -->
+    <template id='phase1'>
+        <div id="easyMode">
+            <div id="game-box"> </div>
+            <button class="all-buttons" onClick="window.location.reload();">Try Again</button>
+            <button class="all-buttons" onclick="goBack()">Home</button>
         </div>
-
-
-
+            
+    </div>
+    </template>
 
     </main>
-  <script src="basic-game.js"></script>
+
+    <aside>
+        <div id="output-box"></div>
+    </aside>
+
+    <footer>
+
+    </footer>
+
+   
+   
+    
+  
+    <script src="assets/structure.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
