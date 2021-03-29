@@ -12,8 +12,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto;
-    column-gap: 0px;
-    row-gap: 0px;
+    gap: 0px;
     justify-content: stretch;
     align-content: stretch;
     justify-items: stretch;
@@ -27,49 +26,5 @@
 
 .target-item{
     background-color: #FFC601;
-    /* height: 50%; */
+    text-align: center;
 }
-
-/*
-.item-11{
-    grid-row: 1;
-    grid-column: 1;
-}
-.item-12{
-    grid-row: 1;
-    grid-column: 2;
-}
-.item-13{
-    grid-row: 1;
-    grid-column: 3;
-}
-.item-14{
-    grid-row: 1;
-    grid-column: 4;
-}
-.item-15{
-    grid-row: 1;
-    grid-column: 5;
-}
-
-.item-21{
-    grid-row: 2;
-    grid-column: 1;
-}
-.item-22{
-    grid-row: 2;
-    grid-column: 2;
-}
-.item-23{
-    grid-row: 2;
-    grid-column: 3;
-}
-.item-24{
-    grid-row: 2;
-    grid-column: 4;
-}
-.item-25{
-    grid-row: 2;
-    grid-column: 5;
-}
-*/
