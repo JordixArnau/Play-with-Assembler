@@ -120,6 +120,7 @@ aside {
 }
 
 .board-item {
+    border: 0;
     /* background-color: #0061B5; */
     /* border: 1px solid #0112A5; */
 }

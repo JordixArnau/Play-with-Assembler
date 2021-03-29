@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="assets/stylesheet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Document</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Play with assembler</title>
 </head>
 <body>
     <header>
@@ -30,6 +31,9 @@
         <h3 id="rank4th">Pau - 109p</h3>
         <h3 id="rank5th">Jordi - 107p</h3>
         <div id="output-box"></div>
+        <div class="name__aside" id="name__aside"></div>
+        <div class="game__aside" id="game__aside"></div>
+        <div class="level__aside" id="level__aside"></div>
     </aside>
 
     <footer>
@@ -38,9 +42,53 @@
 
     <!-- Starting page -->
     <template id='start'>
-        <div id="startDisplay">
-            hola
-        </div>
+      <div id="startDisplay">
+
+
+				<!-- Es necesario escribir el sen -->
+        <form action="" onsubmit="sendForm(); return false" class="form" id="form">
+					<!-- Nombre del jugador -->
+          <div class="form__group" id="group__name">
+						<label for="name" class="form__label">Name:</label>
+						<div class="form__input__group">
+							<input type="text" class="form__input"	id="name" name="name" placeholder="your name wey">
+							<i class="fas fa-biking"></i>
+						</div>
+						<!-- Frase que saldrá si no escribes un nombre -->
+						<p>Debes añadir un nombre</p>
+					</div>
+
+					<!-- Tipo de juego -->
+					<div class="form__group" id="group__game">
+						<label for="name" class="form__label">Game:</label>
+						<div class="form__input__group">
+							<button class="fase1__btn" id="fase1__btn" value="fase 1">fase 1</button>
+							<button class="fase2__btn" id="fase2__btn" value="fase 2" >fase 2</button>
+							<i class="fab fa-android"></i>
+						</div>
+						<!-- Frase que saldrá si no seleccionas un modo de juego -->
+						<p>seleccione un tipo de juego</p>
+					</div>
+
+					<!-- Nivel de dificultad -->
+					<div class="form__group" id="group__level">
+						<label for="name" class="form__label">Level:</label>
+						<div class="form__input__group">
+							<button class="low__level__btn" id="low__level__btn">low</button>
+							<button class="medium__level__btn" id="medium__level__btn">medium</button>
+							<button class="hard__level__btn" id="hard__level__btn">hard</button>
+							<i class="fab fa-angellist"></i>
+						</div>
+						<!-- Frase que saldrá si no seleccionas un nivel de dificultad -->
+						<p>seleccione un nivel de dificultad</p>
+					</div>
+
+					<div class="form__group btn__start">
+						<button type="submit" class="start__btn">Start Game</button>
+					</div>
+
+        </form>
+      </div>
     </template>
 
     <!-- Easy mode of the game -->
@@ -91,6 +139,6 @@
         <script src="js/normal-mode.js"></script>
     </template>
     <script src="assets/structure.js"></script>
-
+		<script src="https://kit.fontawesome.com/608455c295.js" crossorigin="anonymous"></script>
 </body>
 </html>
