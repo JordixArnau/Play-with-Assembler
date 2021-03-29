@@ -21,3 +21,24 @@ function phase2() {
 }
 
 phase2();
+
+
+/* #### Easy Mode ######*/
+var myButton = document.getElementById("game-box");
+//Getting the button with "click-box" as id.
+var myOutput = document.getElementById("output-box");
+//Getting the id for the tag where you want to output your number
+var startNumber = 0;
+
+
+function addToNumber(){
+	myOutput.innerHTML = `The current number of clicks is: ${1+startNumber++}`;
+	
+}
+myButton.onclick = addToNumber;
+
+function goBack() {
+    window.history.back();
+  }
+
+ 

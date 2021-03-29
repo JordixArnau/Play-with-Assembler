@@ -19,7 +19,7 @@
     </main>
 
     <aside>
-
+        <div id="output-box"></div>
     </aside>
 
     <footer>
@@ -36,6 +36,11 @@
     <!-- Easy mode of the game -->
     <template id='phase1'>
         <div id="easyMode">
+        </div>
+        <div id="easyMode">
+            <div id="game-box"></div>
+            <button class="all-buttons" onClick="window.location.reload();">Try Again</button>
+            <button class="all-buttons" onclick="goBack()">Home</button>
         </div>
     </template>
 
@@ -71,6 +76,11 @@
                 <div class="board-item item-54" data-item="54"></div>
                 <div class="board-item item-55" data-item="55"></div>
             </div>
+        </div>
+        <div id="easyMode">
+            <div id="game-box"></div>
+            <button class="all-buttons" onClick="window.location.reload();">Try Again</button>
+            <button class="all-buttons" onclick="goBack()">Home</button>
         </div>
     </template>
     <script src="assets/structure.js"></script>
