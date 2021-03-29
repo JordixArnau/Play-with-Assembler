@@ -36,12 +36,11 @@
     <!-- Easy mode of the game -->
     <template id='phase1'>
         <div id="easyMode">
-        </div>
-        <div id="easyMode">
             <div id="game-box"></div>
             <button class="all-buttons" onClick="window.location.reload();">Try Again</button>
             <button class="all-buttons" onclick="goBack()">Home</button>
         </div>
+        
     </template>
 
     <!-- Normal mode of the game -->
@@ -60,7 +59,7 @@
                 <div class="board-item item-25" data-item="25"></div>
                 <div class="board-item item-31" data-item="31"></div>
                 <div class="board-item item-32" data-item="32"></div>
-                <div class="board-item item-33 target-item" data-item="33">
+                <div class="board-item item-33 target-item" id="game-box-normal" data-item="33">
                     <p id="click-here-text">Click here</p>
                 </div>
                 <div class="board-item item-34" data-item="34"></div>
@@ -76,9 +75,6 @@
                 <div class="board-item item-54" data-item="54"></div>
                 <div class="board-item item-55" data-item="55"></div>
             </div>
-        </div>
-        <div id="easyMode">
-            <div id="game-box"></div>
             <button class="all-buttons" onClick="window.location.reload();">Try Again</button>
             <button class="all-buttons" onclick="goBack()">Home</button>
         </div>

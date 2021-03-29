@@ -1,8 +1,30 @@
+//Getting the button with "click-box" as id.
+var myOutput = document.getElementById("output-box");
+//Getting the id for the tag where you want to output your number
+var startNumber = 0;
+
+
+/* #### Easy Mode Variables######*/
+var myButtonEasy = document.getElementById("game-box");
+var myButtonNormal = document.getElementById("game-box-normal");
+
+/* #### Normal Mode Variables######*/
 let oldTarget = document.querySelector('.target-item');
 
-oldTarget.addEventListener('click', advanceGame);
+oldTarget.addEventListener('click', normalGame);
+oldTarget.addEventListener('click', addToNumber);
 
-function advanceGame(){
+
+
+myButtonEasy.onclick = addToNumber;
+// myButtonNormal.onclick = addToNumber;
+
+
+function addToNumber(){
+	myOutput.innerHTML = `The current number of clicks is: ${1+startNumber++}`;
+	
+}
+function normalGame(){
     let matrixBoard = document.querySelectorAll('.board-item');
     let oldTarget = document.querySelector('.target-item');
     let clickHereText = document.getElementById('click-here-text');
@@ -19,7 +41,8 @@ function advanceGame(){
     /*Removing target element style for current element*/
     oldTarget.classList.remove("target-item");
     oldTarget.innerHTML = '';
-    oldTarget.removeEventListener('click', advanceGame);
+    oldTarget.removeEventListener('click', normalGame);
+    oldTarget.removeAttribute('id');
     // oldTarget.removeChild(oldTarget.lastElementChild);
 
     /*Adding target element to the new random element*/
@@ -31,8 +54,15 @@ function advanceGame(){
             matrixBoard[i].style.height = randHeight.toString()+"%";
             matrixBoard[i].style.width = randWidth.toString()+"%";
             matrixBoard[i].innerHTML = '<p id="click-here-text">Click here</p>';
-            matrixBoard[i].addEventListener('click', advanceGame)
+            matrixBoard[i].addEventListener('click', normalGame);
+            matrixBoard[i].addEventListener('click', addToNumber);
+            // matrixBoard[i].id = "game-box-normal";
+
         }
     }
  };
+
+ function goBack() {
+    window.history.back();
+  }
 
