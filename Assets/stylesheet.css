@@ -37,6 +37,7 @@ main {
 
 aside {
     display: flex;
+    flex-direction: column;
     width: 20%;
     padding: 10px;
     height: 60vh;
@@ -82,7 +83,7 @@ footer  {
     justify-content: center;
     background-color: #fed766;
 }
-#output-box{
+#output-box, #highScore{
     box-sizing: border-box;
     padding: 10px;
     height: 10%;
