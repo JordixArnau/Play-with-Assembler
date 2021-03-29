@@ -73,6 +73,67 @@ aside {
     font-size: 2em;
 }
 
+/*** Easy Game ***/
+#easyMode{
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#game-box{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    margin-top: 120px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fed766;
+    color: #FF4D80;
+}
+#output-box{
+    box-sizing: border-box;
+    padding: 10px;
+    height: 10%;
+    width: 100%;
+    border: black 2px solid;
+}
+
+
+
+/*** Normal Mode ***/
+
+#normalMode .container{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FF4D80;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0px;
+    justify-content: stretch;
+    align-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.board-item {
+    /* background-color: #0061B5; */
+    /* border: 1px solid #0112A5; */
+}
+
+.target-item{
+    background-color: #fed766;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF4D80;
+}
+
+
 
 /*** FOOTER ***/
 
@@ -81,4 +142,19 @@ footer  {
     height: 15vh;
     background-color: #02123C;
     opacity: 0;
+}
+
+/*** General Classes ***/
+
+.all-buttons{
+    font-family: 'VT323', monospace;
+    color: #821510;
+    font-size: 30px;
+    height: 50px;
+    width: 140px;
+    background-color: transparent;
+    border: #821510 2px solid;
+}
+.click-here-text {
+    user-select: none;
 }

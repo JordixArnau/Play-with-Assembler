@@ -13,11 +13,28 @@ function phase1() {
     document.querySelector('main').appendChild(startTemp.cloneNode(true));
 }
 
+<<<<<<< HEAD
 /* phase1(); */
+=======
+// phase1();
+>>>>>>> dev
 
 function phase2() {
     let startTemp = document.getElementById('phase2').content;
     document.querySelector('main').appendChild(startTemp.cloneNode(true));
 }
 
+<<<<<<< HEAD
 phase2();
+=======
+phase2();
+
+
+
+
+
+
+
+
+ 
+>>>>>>> dev
