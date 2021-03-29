@@ -5,10 +5,63 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.container{
+
+body {
+    font-family: 'VT323', monospace;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*** HEADER ***/
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: #02123C;
+}
+
+/*** MAIN ***/
+
+main {
+    height: 75vh;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*** ASIDE ***/
+
+aside {
+    display: flex;
+    width: 20%;
+    padding: 10px;
+    height: 60vh;
+    background-color: #C29F13;
+    border-radius: 15px;
+}
+
+/*** TEMPLATE DIVS ***/
+
+#startDisplay, #easyMode, #normalMode {
+    width: 90%;
+    height: 55vh;
+    padding: 25px;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    font-size: 2em;
+}
+
+#normalMode .container{
+    margin: 0px;
+    padding: 0px;
     background-color: #0061B5;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto;
@@ -20,11 +73,21 @@
 }
 
 .board-item{
-    background-color: #0061B5;
+    /* background-color: #0061B5; */
     /* border: 1px solid #0112A5; */
 }
 
 .target-item{
     background-color: #FFC601;
     text-align: center;
+}
+
+
+
+/*** FOOTER ***/
+
+footer  {
+    width: 100%;
+    height: 15vh;
+    background-color: #02123C;
 }

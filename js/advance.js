@@ -1,4 +1,8 @@
-setInterval(function(){
+let oldTarget = document.querySelector('.target-item');
+
+oldTarget.addEventListener('click', advanceGame);
+
+function advanceGame(){
     let matrixBoard = document.querySelectorAll('.board-item');
     let oldTarget = document.querySelector('.target-item');
     let clickHereText = document.getElementById('click-here-text');
@@ -28,5 +32,5 @@ setInterval(function(){
             matrixBoard[i].innerHTML = '<p id="click-here-text">Click here</p>'
         }
     }
-     }, 1000);
+ };
 
