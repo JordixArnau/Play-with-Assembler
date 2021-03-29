@@ -18,7 +18,19 @@ header {
 
 main {
     height: 65vh;
+    width: 70%;
+    display: flex;
 }
+
+/*** ASIDE ***/
+
+aside {
+    width: 25%;
+    padding: 10px;
+    height: 60vh;
+    background-color: darkgreen;
+}
+
 
 /*** FOOTER ***/
 
