@@ -18,22 +18,26 @@
 
     </main>
 
+    <!-- Rankig and info display -->
     <aside>
         <h2>Player</h2>
         <p id="rankUser">Manu</p>
         <h2>Mode</h2>
         <p id="rankMode">Easy</p>
+        <p id="output-box">Current score: 0</p>
         <h2>Ranking</h2>
         <h3 id="rank1st">Sebas - 1000p</h3>
         <h3 id="rank2nd">Erick - 999p</h3>
         <h3 id="rank3st">Hugo - 998p</h3>
         <h3 id="rank4th">Pau - 109p</h3>
         <h3 id="rank5th">Jordi - 107p</h3>
-        <div id="output-box"></div>
     </aside>
 
     <footer>
-
+        <button id="footStart">START</button>
+        <button id="footPhase1">EASY</button>
+        <button id="footPhase2">NORMAL</button>
+        <button id="footFinish">FINISH</button>
     </footer>
 
     <!-- Starting page -->
@@ -90,6 +94,20 @@
         </div>
         <script src="js/normal-mode.js"></script>
     </template>
+
+    <!-- Finish template -->
+    <template id="finish">
+        <div id="finishDisplay">
+            <h2>TIME'S UP</h2>
+            <p>Your hunting is over!</p>
+            <div id="finalScore">
+                <h3>You have made <span id="result">0</span> clicks.</h3>
+            </div>
+            <button onClick="window.location.reload();">Try Again</button>
+            <button onclick="goBack()">Home</button>
+        </div>
+    </template>
+
     <script src="assets/structure.js"></script>
 
 </body>

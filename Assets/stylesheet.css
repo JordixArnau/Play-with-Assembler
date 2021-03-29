@@ -53,7 +53,7 @@ main {
 aside {
     width: 20%;
     padding: 10px;
-    height: 65vh;
+    height: 70vh;
     background-color: #C29F13;
     border-radius: 15px;
     padding: 25px;
@@ -63,7 +63,7 @@ aside {
 
 /*** TEMPLATE DIVS ***/
 
-#startDisplay, #easyMode, #normalMode {
+#startDisplay, #easyMode, #normalMode, #finishDisplay {
     width: 90%;
     height: 55vh;
     padding: 25px;
@@ -90,16 +90,8 @@ aside {
     justify-content: center;
     background-color: #fed766;
     color: #FF4D80;
+    cursor: url('imgs/nyanCat_right.png'), auto;
 }
-#output-box{
-    box-sizing: border-box;
-    padding: 10px;
-    height: 10%;
-    width: 100%;
-    border: black 2px solid;
-}
-
-
 
 /*** Normal Mode ***/
 
@@ -117,6 +109,7 @@ aside {
     align-content: stretch;
     justify-items: stretch;
     align-items: stretch;
+    cursor: url('imgs/nyanCat_right.png'), auto;
 }
 
 .board-item {
@@ -133,15 +126,65 @@ aside {
     color: #FF4D80;
 }
 
+/*** FINISH TEMPLATE ***/
 
+#finishDisplay {
+    text-align: center;
+    flex-direction: column;
+}
+
+#finishDisplay button {
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 35px;
+    font-family: 'VT323', monospace;
+}
+
+#finalScore h3 {
+    display: inline-block;
+}
+
+#finalScore h3 {
+    color: white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, jump-end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+}
+
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
 
 /*** FOOTER ***/
 
 footer  {
     width: 100%;
     height: 15vh;
-    background-color: #02123C;
-    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer button {
+    padding: 10px;
+    height: 40px;
+    font-size: 1.5em;
+    margin-right: 15px;
 }
 
 /*** General Classes ***/

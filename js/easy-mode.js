@@ -13,7 +13,7 @@ myButtonEasy.onclick = addToNumber;
 
 
 function addToNumber(){
-	myOutput.innerHTML = `The current number of clicks is: ${1+startNumber++}`;
+	myOutput.innerHTML = `Current score: ${1+startNumber++}`;
 	
 }
 
