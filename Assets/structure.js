@@ -1,7 +1,6 @@
 function start() {
-    let startTemp = document.getElementById('start');
-    document.querySelector('aside').style.display = 'none';
-    document.querySelector('main').appendChild(startTemp);
+    let startTemp = document.getElementById('start').content;
+    document.querySelector('main').appendChild(startTemp.cloneNode(true));
 }
 
 start();
