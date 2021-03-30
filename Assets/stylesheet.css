@@ -222,7 +222,37 @@ footer button {
 }
 
 
-/*TODO Aqui trabaja el wey del ERICK*/
+/*TODO Aqui ha trabajado el wey del ERICK*/
 .bad__imput{
     border: red solid 4px;
+}
+
+.number__count{
+    position: absolute;
+    top: 20%;
+    left: center;
+    width: 100px;
+    height: 100px;
+    animation: scale-number 1s linear;
+    transform-origin: 130px center;
+}
+
+#number-0{
+    display: none;
+
+}
+#number-1{
+    display: none;
+
+}
+#number-2{
+    display: none;
+}
+#number-3{
+    display: none;
+}
+
+@keyframes scale-number{
+    0%{transform: scale(.5);}
+    100%{transform: scale(1);}
 }

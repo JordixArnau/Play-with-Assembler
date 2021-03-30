@@ -16,7 +16,6 @@
     </header>
 
     <main>
-
     </main>
 
     <!-- Rankig and info display -->
@@ -41,6 +40,7 @@
         <button id="footPhase1">EASY</button>
         <button id="footPhase2">NORMAL</button>
         <button id="footFinish">FINISH</button>
+        <button id="readyBtn">ready</button>
     </footer>
 
     <!-- Starting page -->
@@ -93,15 +93,33 @@
         </div>
     </template>
 
+    <!-- Contador para el ready steady -->
+    <template id="ready-template">
+        <div id="ready-page">
+            <div class="number__count" id="number-3">
+                <img src="Assets/imgs/3.png" alt="3">
+            </div>
+            <div class="number__count" id="number-2">
+                <img src="Assets/imgs/2.png" alt="2">
+            </div>
+            <div class="number__count" id="number-1">
+                <img src="Assets/imgs/1.png" alt="1">
+            </div>
+            <div class="number__count" id="number-0">
+                <img src="Assets/imgs/0.png" alt="0">
+            </div>
+
+        </div>
+
+    </template>
+
     <!-- Easy mode of the game -->
     <template id='phase1'>
         <div id="easyMode">
             <div id="game-box"><p class="click-here-text" id="click-here-text">Click here</p></div>
-            <button class="all-buttons" onClick="window.location.reload();">Try Again</button>
-            <button class="all-buttons" onclick="goBack()">Home</button>
         </div>
         <script src="js/easy-mode.js"></script>
-    </template>
+        </template>
 
     <!-- Normal mode of the game -->
     <template id="phase2">
@@ -134,8 +152,6 @@
                 <div class="board-item item-53" data-item="53"></div>
                 <div class="board-item item-54" data-item="54"></div>
                 <div class="board-item item-55" data-item="55"></div>
-                <button class="all-buttons" onClick="window.location.reload();">Try Again</button>
-                <button class="all-buttons" onclick="goBack()">Home</button>
             </div>
         </div>
         <script src="js/normal-mode.js"></script>
@@ -155,6 +171,6 @@
     </template>
 
     <script src="assets/structure.js"></script>
-		<script src="https://kit.fontawesome.com/608455c295.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/608455c295.js" crossorigin="anonymous"></script>
 </body>
 </html>
