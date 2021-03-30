@@ -103,17 +103,22 @@ aside {
     flex-direction:column ;
     justify-content: space-between;
     align-items: center;
+    background-image:url('imgs/Waterfall-Background-PixelJointcomseb.gif') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
 #game-box{
     display: flex;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     margin-top: 120px;
     align-items: center;
     justify-content: center;
-    background-color: #fed766;
-    color: #FF4D80;
+    background-color: #F39C6B;
+    opacity: 90%;
+    color: #434E6D;
     cursor: url('imgs/nyanCat_right.png'), auto;
 }
 
