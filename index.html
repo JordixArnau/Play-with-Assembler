@@ -29,9 +29,9 @@
         <h2>Score</h2>
             <p id="output-box">-</p>
         <h2>Ranking</h2>
-        <h3 id="rank1st">Sebas - 1000p</h3>
-        <h3 id="rank2nd">Erick - 999p</h3>
-        <h3 id="rank3st">Hugo - 998p</h3>
+        <h3 id="rank1st">-</h3>
+        <h3 id="rank2nd">-</h3>
+        <h3 id="rank3rd">-</h3>
 
     </aside>
 
@@ -108,7 +108,6 @@
                 <img src="Assets/imgs/0.png" alt="0">
             </div>
         </div>
-        <script src="js/ready.js"></script>
     </template>
 
     <!-- Easy mode of the game -->
@@ -154,7 +153,7 @@
             </div>
         </div>
         <script src="js/normal-mode.js"></script>
-        <script src="js/timer.js"></script>        
+        <script src="js/timer.js"></script>
     </template>
 
     <!-- Finish template -->
@@ -163,7 +162,7 @@
             <h2>TIME'S UP</h2>
             <p>Your hunting is over!</p>
             <div id="finalScore">
-                <h3>You have made <span id="result"></span> clicks.</h3>
+                <h3>You have made <span id="result">0</span> clicks.</h3>
             </div>
             <button onClick="window.location.reload();">Try Again</button>
             <button onclick="goBack()">Home</button>
@@ -171,6 +170,7 @@
     </template>
 
     <script src="assets/structure.js"></script>
+    <script src="js/ranking.js"></script>
 	<script src="https://kit.fontawesome.com/608455c295.js" crossorigin="anonymous"></script>
 </body>
 </html>
