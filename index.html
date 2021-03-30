@@ -21,19 +21,19 @@
 
     <aside>
         <h2>Player</h2>
-        <p id="rankUser">Manu</p>
+					<div class="name__aside" id="name__aside"></div>
         <h2>Mode</h2>
-        <p id="rankMode">Easy</p>
+					<div class="game__aside" id="game__aside"></div>
+				<h2>Level</h2>
+					<div class="level__aside" id="level__aside"></div>
         <h2>Ranking</h2>
         <h3 id="rank1st">Sebas - 1000p</h3>
         <h3 id="rank2nd">Erick - 999p</h3>
         <h3 id="rank3st">Hugo - 998p</h3>
-        <h3 id="rank4th">Pau - 109p</h3>
-        <h3 id="rank5th">Jordi - 107p</h3>
+        <!-- <h3 id="rank4th">Pau - 109p</h3>
+        <h3 id="rank5th">Jordi - 107p</h3> -->
         <div id="output-box"></div>
-        <div class="name__aside" id="name__aside"></div>
-        <div class="game__aside" id="game__aside"></div>
-        <div class="level__aside" id="level__aside"></div>
+
     </aside>
 
     <footer>
@@ -51,8 +51,9 @@
           <div class="form__group" id="group__name">
 						<label for="name" class="form__label">Name:</label>
 						<div class="form__input__group">
-							<input type="text" class="form__input"	id="name" name="name" placeholder="your name wey">
 							<i class="fas fa-biking"></i>
+							<input type="text" class="form__input"	id="name__player" name="name__player" placeholder="your name wey">
+
 						</div>
 						<!-- Frase que saldrá si no escribes un nombre -->
 						<p>Debes añadir un nombre</p>
@@ -62,9 +63,10 @@
 					<div class="form__group" id="group__game">
 						<label for="name" class="form__label">Game:</label>
 						<div class="form__input__group">
+							<i class="fab fa-android"></i>
 							<button class="fase1__btn" id="fase1__btn" value="fase 1">fase 1</button>
 							<button class="fase2__btn" id="fase2__btn" value="fase 2" >fase 2</button>
-							<i class="fab fa-android"></i>
+
 						</div>
 						<!-- Frase que saldrá si no seleccionas un modo de juego -->
 						<p>seleccione un tipo de juego</p>
@@ -74,10 +76,11 @@
 					<div class="form__group" id="group__level">
 						<label for="name" class="form__label">Level:</label>
 						<div class="form__input__group">
+							<i class="fab fa-angellist"></i>
 							<button class="low__level__btn" id="low__level__btn">low</button>
 							<button class="medium__level__btn" id="medium__level__btn">medium</button>
 							<button class="hard__level__btn" id="hard__level__btn">hard</button>
-							<i class="fab fa-angellist"></i>
+
 						</div>
 						<!-- Frase que saldrá si no seleccionas un nivel de dificultad -->
 						<p>seleccione un nivel de dificultad</p>

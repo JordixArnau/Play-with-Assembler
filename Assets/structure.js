@@ -31,7 +31,7 @@ function sendForm (){
 
     /* Pescando los IDs del html */
     const form = document.getElementById("form");
-    const nameInput = document.getElementById("name");
+    const nameInput = document.getElementById("name__player");
     /* Botones que seleccionan el JUEGO*/
     const fase1Btn = document.getElementById("fase1__btn");
     const fase2Btn = document.getElementById("fase2__btn");
@@ -45,6 +45,9 @@ function sendForm (){
     const nameAside = document.getElementById("name__aside");
     const gameAside = document.getElementById("game__aside");
     const levelAside = document.getElementById("level__aside");
+
+    /* Regex para el nombre */
+    const nameRegex = /^[a-zA-ZÀ-ÿ\_\-]{4,16}$/;
 
     /* Añadiendo EventListeners a los botones*/
     fase1Btn.addEventListener('click', () =>{
@@ -62,6 +65,25 @@ function sendForm (){
     });
     hardBtn.addEventListener('click', () =>{
         levelAside.innerHTML = hardBtn.innerHTML;
+    });
+
+
+    /* Aquí está la funcion que va a validar el REGEX del nombre */
+    const formValidate = (e) => {
+        // e.target.name;
+        // if(nameRegex.test(e.target.value)){}
+        
+        
+        nameAside.innerHTML = nameInput.value;
+
+    };
+    /* El evento BLUR se ejecutará cuando se haga click fuera del input */
+    nameInput.addEventListener('blur', formValidate);
+    nameInput.addEventListener('keyup', formValidate);
+
+    /* No se muy bien que hace esta funcion de aqui abajo, pero vi que era recomendable en un video ya que lo que hace es como.. NO envar estos datos a ninguna página externa si tuviesemos PHP o algo así hasta que no se haga click en submit */
+    form.addEventListener('submit', (element) => {
+        element.preventDefault();
     });
 
 };
