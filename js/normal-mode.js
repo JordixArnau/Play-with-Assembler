@@ -3,7 +3,7 @@ var myOutput = document.getElementById("output-box");
 //Getting the id for the tag where you want to output your number
 var startNumber = 0;
 
-var myButtonNormal = document.getElementById("game-box-normal");
+var clickButton = document.getElementById("game-box-normal");
 
 /* #### Normal Mode Variables######*/
 let oldTarget = document.querySelector('.target-item');
