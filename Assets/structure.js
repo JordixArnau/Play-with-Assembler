@@ -41,6 +41,7 @@ function finish() {
     let finishTemp = document.getElementById('finish').content;
     document.querySelector('main').appendChild(finishTemp.cloneNode(true));
     document.getElementById('result').innerHTML = startNumber;
+    rankingCount(rank, rankMode);
 }
 
 document.getElementById('footFinish').addEventListener('click', finish);
@@ -201,4 +202,3 @@ function toReady() {
 
 
 document.getElementById('start__btn').addEventListener('click', toReady);
-/* document.getElementById('start__btn').addEventListener('click', contador); */
