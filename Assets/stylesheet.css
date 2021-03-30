@@ -93,6 +93,8 @@ aside {
 
 .alerts {
     display: inline-block;
+    visibility: hidden;
+    color: red;
 }
 
 /*** Easy Game ***/

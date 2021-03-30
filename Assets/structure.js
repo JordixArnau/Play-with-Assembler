@@ -52,9 +52,34 @@ document.getElementById('footFinish').addEventListener('click', finish);
 
 function checkName() {
     /* Pescando los IDs del html */
-    const nameInput = document.getElementById("name__player");
+    const nameInput = document.getElementById("name__player").value;
+    let nameAlert = document.querySelectorAll('.alerts')[0];
+    const nameAside = document.getElementById("name__aside");
 
+    if (nameInput == "") {
+        nameAlert.style.visibility = 'visible';
+        nameAside.innerHTML = '-';
+        return false;
+    } else {
+        nameAlert.style.visibility = 'hidden';
+        nameAside.innerHTML = nameInput;
+        return true;
+    }
+}
 
+function checkMode(event) {
+    const fase1Btn = document.getElementById("fase1__btn");
+    const fase2Btn = document.getElementById("fase2__btn");
+    let modeAlert = document.querySelectorAll('.alerts')[1];
+    const gameAside = document.getElementById("game__aside");
+    
+    if (event.target.value == "Phase 1") {
+        gameAside.innerHTML = "Phase 1";
+    } else if  (event.target.value == "Phase 2") {
+        gameAside.innerHTML = "Phase 2";
+    } else if (event.target.value == "") {
+        modeAlert.style.visibility = 'visible';
+    }
 }
 
 
@@ -62,8 +87,7 @@ function sendForm (){
 
 
     /* Botones que seleccionan el JUEGO*/
-    const fase1Btn = document.getElementById("fase1__btn");
-    const fase2Btn = document.getElementById("fase2__btn");
+
     /* Botones que seleccionan el NIVEL*/
     const lowBtn = document.getElementById("low__level__btn");
     const mediumBtn = document.getElementById("medium__level__btn");
@@ -72,7 +96,7 @@ function sendForm (){
     const startBtn = document.getElementById("start__btn");
     /* Divs donde se pondrán los nombres*/
     const nameAside = document.getElementById("name__aside");
-    const gameAside = document.getElementById("game__aside");
+    
     const levelAside = document.getElementById("level__aside");
 
     /* Regex para el nombre */
@@ -111,6 +135,9 @@ function sendForm (){
 
 document.getElementById("name__player").addEventListener('blur', checkName);
 document.getElementById("name__player").addEventListener('keyup', checkName);
+
+document.getElementById("fase1__btn").addEventListener('click', checkMode);
+document.getElementById("fase2__btn").addEventListener('click', checkMode);
 
 //Function for the countdown before beginning the game
 function contador (){
