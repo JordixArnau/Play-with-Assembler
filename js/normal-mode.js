@@ -44,7 +44,7 @@ function normalGame(){
             matrixBoard[i].classList.add("target-item")
             matrixBoard[i].style.height = randHeight.toString()+"%";
             matrixBoard[i].style.width = randWidth.toString()+"%";
-            matrixBoard[i].innerHTML = '<p class="click-here-text" id="click-here-text">Click here</p>';
+            matrixBoard[i].innerHTML = '<img src="Assets/imgs/a70cfa5eb27cde688d4a6d1eb2900a3e.gif" alt="">';
             matrixBoard[i].addEventListener('click', normalGame);
             matrixBoard[i].addEventListener('click', addToNumber);
         }
