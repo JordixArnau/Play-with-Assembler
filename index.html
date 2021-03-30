@@ -41,6 +41,7 @@
         <button id="footPhase2">NORMAL</button>
         <button id="footFinish">FINISH</button>
         <button id="readyBtn">ready</button>
+        <div id="timerCount"></div>
     </footer>
 
     <!-- Starting page -->
@@ -115,6 +116,7 @@
             <div id="game-box"><p class="click-here-text" id="click-here-text">Click here</p></div>
         </div>
         <script src="js/easy-mode.js"></script>
+        <script src="js/timer.js"></script>
         </template>
 
     <!-- Normal mode of the game -->
@@ -151,6 +153,7 @@
             </div>
         </div>
         <script src="js/normal-mode.js"></script>
+        <script src="js/timer.js"></script>        
     </template>
 
     <!-- Finish template -->
@@ -159,7 +162,7 @@
             <h2>TIME'S UP</h2>
             <p>Your hunting is over!</p>
             <div id="finalScore">
-                <h3>You have made <span id="result">0</span> clicks.</h3>
+                <h3>You have made <span id="result"></span> clicks.</h3>
             </div>
             <button onClick="window.location.reload();">Try Again</button>
             <button onclick="goBack()">Home</button>
