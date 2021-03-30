@@ -91,6 +91,10 @@ aside {
     font-family: 'VT323', monospace;
 }
 
+.alerts {
+    display: inline-block;
+}
+
 /*** Easy Game ***/
 #easyMode{
     display: flex;

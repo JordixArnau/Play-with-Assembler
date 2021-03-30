@@ -1,5 +1,4 @@
 //Functions that activate the different templates
-//To activate or deactivate any of the templates just comment the function
 
 function start() {
     document.querySelector('main').innerHTML = "";
@@ -9,7 +8,6 @@ function start() {
 
 start();
 document.getElementById('footStart').addEventListener('click', start);
- //start();
 
 
 function ready() {
@@ -52,10 +50,17 @@ document.getElementById('footFinish').addEventListener('click', finish);
 --------------- ERICK FORMS -------------
 -----------------------------------------*/
 
-function sendForm (){
-
+function checkName() {
     /* Pescando los IDs del html */
     const nameInput = document.getElementById("name__player");
+
+
+}
+
+
+function sendForm (){
+
+
     /* Botones que seleccionan el JUEGO*/
     const fase1Btn = document.getElementById("fase1__btn");
     const fase2Btn = document.getElementById("fase2__btn");
@@ -101,13 +106,13 @@ function sendForm (){
 
     };
     /* El evento BLUR se ejecutará cuando se haga click fuera del input */
-    nameInput.addEventListener('blur', formValidate);
-    nameInput.addEventListener('keyup', formValidate);
-
-
 };
 
-sendForm();
+
+document.getElementById("name__player").addEventListener('blur', checkName);
+document.getElementById("name__player").addEventListener('keyup', checkName);
+
+//Function for the countdown before beginning the game
 function contador (){
 
     /* Pescando los diferentes numeros */
@@ -115,6 +120,11 @@ function contador (){
     const number2 = document.getElementById("number-2");
     const number1 = document.getElementById("number-1");
     const number0 = document.getElementById("number-0");
+
+    //Defining the elements to change to the game
+    let selectedMode = document.getElementById('game__aside').innerText;
+    let p1 = document.getElementById('phase1').content;
+    let p2 = document.getElementById('phase2').content;
 
     /* Usando el Set timeout enciendo el div contenedor del numero exacto que quiero que se vea en pantalla. */
     setTimeout(() =>{
@@ -134,25 +144,24 @@ function contador (){
     },4000);
     setTimeout(() =>{
         number0.style.display = "none";
+
+        if (selectedMode == 'Phase 2') {
+            document.querySelector('main').appendChild(p2.cloneNode(true));
+        } else {
+            document.querySelector('main').appendChild(p1.cloneNode(true));
+        }
     },5000);
 
 }
 
 
 //Function to start the selected phase of the game going through the ready section
-function toPlay() {
-
+function toReady() {
     document.querySelector('main').innerHTML = "";
-    let p1 = document.getElementById('phase1').content;
-    let p2 = document.getElementById('phase2').content;
-    let selectedMode = document.getElementById('game__aside').innerText;
-    console.log(selectedMode);
+    let readyTemp = document.getElementById('ready-template').content;
 
-    if (selectedMode == 'Phase 1') {
-        document.querySelector('main').appendChild(p1.cloneNode(true));
-    } else if (selectedMode == 'Phase 2') {
-        document.querySelector('main').appendChild(p2.cloneNode(true));
-    }
+    document.querySelector('main').appendChild(readyTemp.cloneNode(true));
 };
 
-document.getElementById('start__btn').addEventListener('click', toPlay);
+document.getElementById('start__btn').addEventListener('click', toReady);
+document.getElementById('start__btn').addEventListener('click', contador);
