@@ -212,7 +212,7 @@ footer button {
     margin-right: 15px;
 }
 #timerCount{
-    display: flex;
+    display: none;
     font-size: 50px;
     height: 80px;
     width: 80px;
