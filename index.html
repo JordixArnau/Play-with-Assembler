@@ -19,13 +19,14 @@
 
     </main>
 
+    <!-- Rankig and info display -->
     <aside>
         <h2>Player</h2>
 					<div class="name__aside" id="name__aside"></div>
         <h2>Mode</h2>
 					<div class="game__aside" id="game__aside"></div>
-				<h2>Level</h2>
-					<div class="level__aside" id="level__aside"></div>
+        <h2>Level</h2>
+            <div class="level__aside" id="level__aside"></div>
         <h2>Ranking</h2>
         <h3 id="rank1st">Sebas - 1000p</h3>
         <h3 id="rank2nd">Erick - 999p</h3>
@@ -37,7 +38,10 @@
     </aside>
 
     <footer>
-
+        <button id="footStart">START</button>
+        <button id="footPhase1">EASY</button>
+        <button id="footPhase2">NORMAL</button>
+        <button id="footFinish">FINISH</button>
     </footer>
 
     <!-- Starting page -->
@@ -141,6 +145,20 @@
         </div>
         <script src="js/normal-mode.js"></script>
     </template>
+
+    <!-- Finish template -->
+    <template id="finish">
+        <div id="finishDisplay">
+            <h2>TIME'S UP</h2>
+            <p>Your hunting is over!</p>
+            <div id="finalScore">
+                <h3>You have made <span id="result">0</span> clicks.</h3>
+            </div>
+            <button onClick="window.location.reload();">Try Again</button>
+            <button onclick="goBack()">Home</button>
+        </div>
+    </template>
+
     <script src="assets/structure.js"></script>
 		<script src="https://kit.fontawesome.com/608455c295.js" crossorigin="anonymous"></script>
 </body>
