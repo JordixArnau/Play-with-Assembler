@@ -42,14 +42,14 @@
         <button id="footPhase1">EASY</button>
         <button id="footPhase2">NORMAL</button>
         <button id="footFinish">FINISH</button>
+        <button id="readyBtn">ready</button>
     </footer>
 
     <!-- Starting page -->
     <template id='start'>
       <div id="startDisplay">
 
-
-				<!-- Es necesario escribir el sen -->
+				<!-- Es necesario escribir el senForm() en falso para que no se envie ni se actualice el formulario hasta que se avise con un botton -->
         <form action="" onsubmit="sendForm(); return false" class="form" id="form">
 					<!-- Nombre del jugador -->
           <div class="form__group" id="group__name">
@@ -96,6 +96,26 @@
 
         </form>
       </div>
+    </template>
+
+    <!-- Contador para el ready steady -->
+    <template id="ready-template">
+        <div id="ready-page">
+            <div class="number__count" id="0">
+                <img src="Assets/imgs/3.png" alt="0">
+            </div>
+            <div class="number__count">
+                <img src="Assets/imgs/2.png" id="1" alt="0">
+            </div>
+            <div class="number__count">
+                <img src="Assets/imgs/1.png" id="2" alt="0">
+            </div>
+            <div class="number__count">
+                <img src="Assets/imgs/0.png" id="3" alt="0">
+            </div>
+
+        </div>
+
     </template>
 
     <!-- Easy mode of the game -->

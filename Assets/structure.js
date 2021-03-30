@@ -7,7 +7,16 @@ function start() {
     document.querySelector('main').appendChild(startTemp.cloneNode(true));
 }
 
- start();
+ //start();
+
+
+function ready() {
+    document.querySelector('main').innerHTML = "";
+    let readyTemp = document.getElementById('ready-template').content;
+    document.querySelector('main').appendChild(readyTemp.cloneNode(true));
+}
+
+document.getElementById('readyBtn').addEventListener('click', ready);
 
 function phase1() {
     document.querySelector('main').innerHTML = "";
@@ -33,7 +42,7 @@ function finish() {
     document.getElementById('result').innerHTML = startNumber;
 }
 
-/* phase2(); */
+// phase2();
 
 
 /*---------------------------------------
@@ -85,8 +94,7 @@ function sendForm (){
     const formValidate = (e) => {
         // e.target.name;
         // if(nameRegex.test(e.target.value)){}
-        
-        
+
         nameAside.innerHTML = nameInput.value;
 
     };

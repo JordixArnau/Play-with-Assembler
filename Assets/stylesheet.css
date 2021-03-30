@@ -208,3 +208,11 @@ footer button {
 .bad__imput{
     border: red solid 4px;
 }
+
+.number__count{
+    position: absolute;
+    top: 20%;
+    left: center;
+    width: 100px;
+    height: 100px;
+}
