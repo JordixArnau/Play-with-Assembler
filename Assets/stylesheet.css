@@ -73,6 +73,24 @@ aside {
     font-size: 2em;
 }
 
+/*** START TEMPLATE ***/
+
+#startDisplay button {
+    display: inline-block;
+    max-width: 150px;
+    padding: 5px;
+    font-size: .8em;
+    margin-top: 35px;
+    font-family: 'VT323', monospace;
+}
+
+#startDisplay input {
+    padding: 5px;
+    font-size: .8em;
+    margin-top: 35px;
+    font-family: 'VT323', monospace;
+}
+
 /*** Easy Game ***/
 #easyMode{
     display: flex;
@@ -155,7 +173,7 @@ aside {
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
     animation:
-        typing 3.5s steps(40, jump-end),
+        typing 4s steps(40, jump-end),
         blink-caret .75s step-end infinite;
 }
 

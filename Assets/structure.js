@@ -7,6 +7,7 @@ function start() {
     document.querySelector('main').appendChild(startTemp.cloneNode(true));
 }
 
+start();
 document.getElementById('footStart').addEventListener('click', start);
 
 function phase1() {
@@ -43,7 +44,6 @@ document.getElementById('footFinish').addEventListener('click', finish);
 function sendForm (){
 
     /* Pescando los IDs del html */
-    const form = document.getElementById("form");
     const nameInput = document.getElementById("name__player");
     /* Botones que seleccionan el JUEGO*/
     const fase1Btn = document.getElementById("fase1__btn");
@@ -94,28 +94,25 @@ function sendForm (){
     nameInput.addEventListener('blur', formValidate);
     nameInput.addEventListener('keyup', formValidate);
 
-    /* No se muy bien que hace esta funcion de aqui abajo, pero vi que era recomendable en un video ya que lo que hace es como.. NO envar estos datos a ninguna página externa si tuviesemos PHP o algo así hasta que no se haga click en submit */
-    form.addEventListener('submit', (element) => {
-        element.preventDefault();
-    });
 
 };
 
+sendForm();
 
+//Function to start the selected phase of the game going through the ready section
+function toPlay() {
 
+    document.querySelector('main').innerHTML = "";
+    let p1 = document.getElementById('phase1').content;
+    let p2 = document.getElementById('phase2').content;
+    let selectedMode = document.getElementById('game__aside').innerText;
+    console.log(selectedMode);
 
+    if (selectedMode == 'Phase 1') {
+        document.querySelector('main').appendChild(p1.cloneNode(true));
+    } else if (selectedMode == 'Phase 2') {
+        document.querySelector('main').appendChild(p2.cloneNode(true));
+    }
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById('start__btn').addEventListener('click', toPlay);

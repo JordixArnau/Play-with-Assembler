@@ -27,13 +27,12 @@
             <p id="game__aside">-</p>
         <h2>Level</h2>
             <p id="level__aside">-</p>
+        <h2>Score</h2>
+            <p id="output-box">-</p>
         <h2>Ranking</h2>
         <h3 id="rank1st">Sebas - 1000p</h3>
         <h3 id="rank2nd">Erick - 999p</h3>
         <h3 id="rank3st">Hugo - 998p</h3>
-        <h3 id="rank4th">Pau - 109p</h3>
-        <h3 id="rank5th">Jordi - 107p</h3>
-        <div id="output-box"></div>
 
     </aside>
 
@@ -48,53 +47,49 @@
     <template id='start'>
         <div id="startDisplay">
 
+				<!-- Nombre del jugador -->
+            <div class="form__group" id="group__name">
+				<label for="name" class="form__label">Name:</label>
+				<div class="form__input__group">
+					<i class="fas fa-biking"></i>
+					<input type="text" class="form__input"	id="name__player" name="name__player" placeholder="your name wey">
 
-				<!-- Es necesario escribir el sen -->
-            <form action="" onsubmit="sendForm(); return false" class="form" id="form">
-					<!-- Nombre del jugador -->
-                <div class="form__group" id="group__name">
-						<label for="name" class="form__label">Name:</label>
-						<div class="form__input__group">
-							<i class="fas fa-biking"></i>
-							<input type="text" class="form__input"	id="name__player" name="name__player" placeholder="your name wey">
+			    </div>
 
-						</div>
-						<!-- Frase que saldrá si no escribes un nombre -->
-						<p>Debes añadir un nombre</p>
+                <!-- Frase que saldrá si no escribes un nombre -->
+			    <p>Debes añadir un nombre</p>
+		    </div>
+
+				<!-- Tipo de juego -->
+				<div class="form__group" id="group__game">
+					<label for="name" class="form__label">Game:</label>
+					<div class="form__input__group">
+						<i class="fab fa-android"></i>
+						<button class="fase1__btn" id="fase1__btn" value="Phase 1">Phase 1</button>
+						<button class="fase2__btn" id="fase2__btn" value="Phase 2" >Phase 2</button>
+
 					</div>
+					<!-- Frase que saldrá si no seleccionas un modo de juego -->
+					<p>Seleccione un tipo de juego</p>
+				</div>
 
-					<!-- Tipo de juego -->
-					<div class="form__group" id="group__game">
-						<label for="name" class="form__label">Game:</label>
-						<div class="form__input__group">
-							<i class="fab fa-android"></i>
-							<button class="fase1__btn" id="fase1__btn" value="fase 1">Fase 1</button>
-							<button class="fase2__btn" id="fase2__btn" value="fase 2" >Fase 2</button>
-
-						</div>
-						<!-- Frase que saldrá si no seleccionas un modo de juego -->
-						<p>seleccione un tipo de juego</p>
+				<!-- Nivel de dificultad -->
+				<div class="form__group" id="group__level">
+					<label for="name" class="form__label">Level:</label>
+					<div class="form__input__group">
+						<i class="fab fa-angellist"></i>
+						<button class="low__level__btn" id="low__level__btn">Easy</button>
+						<button class="medium__level__btn" id="medium__level__btn">Normal</button>
+						<button class="hard__level__btn" id="hard__level__btn">Hard</button>
 					</div>
+					<!-- Frase que saldrá si no seleccionas un nivel de dificultad -->
+					<p>Seleccione un nivel de dificultad</p>
+				</div>
 
-					<!-- Nivel de dificultad -->
-					<div class="form__group" id="group__level">
-						<label for="name" class="form__label">Level:</label>
-						<div class="form__input__group">
-							<i class="fab fa-angellist"></i>
-							<button class="low__level__btn" id="low__level__btn">Easy</button>
-							<button class="medium__level__btn" id="medium__level__btn">Normal</button>
-							<button class="hard__level__btn" id="hard__level__btn">Hard</button>
+				<div class="form__group btn__start">
+					<button id="start__btn">Start Game</button>
+				</div>
 
-						</div>
-						<!-- Frase que saldrá si no seleccionas un nivel de dificultad -->
-						<p>seleccione un nivel de dificultad</p>
-					</div>
-
-					<div class="form__group btn__start">
-						<button type="submit" class="start__btn">Start Game</button>
-					</div>
-
-            </form>
         </div>
     </template>
 
