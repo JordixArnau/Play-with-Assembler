@@ -59,85 +59,66 @@ function checkName() {
     if (nameInput == "") {
         nameAlert.style.visibility = 'visible';
         nameAside.innerHTML = '-';
-        return false;
     } else {
         nameAlert.style.visibility = 'hidden';
         nameAside.innerHTML = nameInput;
-        return true;
     }
 }
 
 function checkMode(event) {
+    /* Botones que seleccionan el JUEGO*/
     const fase1Btn = document.getElementById("fase1__btn");
     const fase2Btn = document.getElementById("fase2__btn");
-    let modeAlert = document.querySelectorAll('.alerts')[1];
     const gameAside = document.getElementById("game__aside");
-    
+
     if (event.target.value == "Phase 1") {
         gameAside.innerHTML = "Phase 1";
+        fase2Btn.style.backgroundColor = 'white';
+        fase1Btn.style.backgroundColor = '#C29F13';
     } else if  (event.target.value == "Phase 2") {
         gameAside.innerHTML = "Phase 2";
-    } else if (event.target.value == "") {
-        modeAlert.style.visibility = 'visible';
+        fase1Btn.style.backgroundColor = 'white';
+        fase2Btn.style.backgroundColor = '#C29F13';
     }
 }
 
-
-function sendForm (){
-
-
-    /* Botones que seleccionan el JUEGO*/
-
+function checkDifficulty(e) {
     /* Botones que seleccionan el NIVEL*/
     const lowBtn = document.getElementById("low__level__btn");
     const mediumBtn = document.getElementById("medium__level__btn");
     const hardBtn = document.getElementById("hard__level__btn");
-    /* boton de START*/
-    const startBtn = document.getElementById("start__btn");
-    /* Divs donde se pondrán los nombres*/
-    const nameAside = document.getElementById("name__aside");
-    
     const levelAside = document.getElementById("level__aside");
 
-    /* Regex para el nombre */
-    const nameRegex = /^[a-zA-ZÀ-ÿ\_\-]{4,16}$/;
-
-    /* Añadiendo EventListeners a los botones*/
-    fase1Btn.addEventListener('click', () =>{
-        gameAside.innerHTML = fase1Btn.value;
-    });
-    fase2Btn.addEventListener('click', () =>{
-        gameAside.innerHTML = fase2Btn.value;
-    });
-    /* Listeners del ASIDE */
-    lowBtn.addEventListener('click', () =>{
-        levelAside.innerHTML = lowBtn.innerHTML;
-    });
-    mediumBtn.addEventListener('click', () =>{
-        levelAside.innerHTML = mediumBtn.innerHTML;
-    });
-    hardBtn.addEventListener('click', () =>{
-        levelAside.innerHTML = hardBtn.innerHTML;
-    });
-
-
-    /* Aquí está la funcion que va a validar el REGEX del nombre */
-    const formValidate = (e) => {
-        // e.target.name;
-        // if(nameRegex.test(e.target.value)){}
-
-        nameAside.innerHTML = nameInput.value;
-
-    };
-    /* El evento BLUR se ejecutará cuando se haga click fuera del input */
-};
-
+    if (e.target.innerHTML == "Easy") {
+        levelAside.innerHTML = "Easy";
+        mediumBtn.style.backgroundColor = 'white';
+        hardBtn.style.backgroundColor = 'white';
+        lowBtn.style.backgroundColor = '#C29F13';
+    } else if  (e.target.innerHTML == "Normal") {
+        levelAside.innerHTML = "Normal";
+        lowBtn.style.backgroundColor = 'white';
+        hardBtn.style.backgroundColor = 'white';
+        mediumBtn.style.backgroundColor = '#C29F13';
+    } else if  (e.target.innerHTML == "Hard") {
+        levelAside.innerHTML = "Hard";
+        lowBtn.style.backgroundColor = 'white';
+        mediumBtn.style.backgroundColor = 'white';
+        hardBtn.style.backgroundColor = '#C29F13';
+    }
+}
 
 document.getElementById("name__player").addEventListener('blur', checkName);
 document.getElementById("name__player").addEventListener('keyup', checkName);
 
 document.getElementById("fase1__btn").addEventListener('click', checkMode);
 document.getElementById("fase2__btn").addEventListener('click', checkMode);
+
+document.getElementById("low__level__btn").addEventListener('click', checkDifficulty);
+document.getElementById("medium__level__btn").addEventListener('click', checkDifficulty);
+document.getElementById("hard__level__btn").addEventListener('click', checkDifficulty);
+
+document.getElementById("start__btn").addEventListener('click', toReady);
+
 
 //Function for the countdown before beginning the game
 function contador (){
@@ -184,11 +165,26 @@ function contador (){
 
 //Function to start the selected phase of the game going through the ready section
 function toReady() {
-    document.querySelector('main').innerHTML = "";
     let readyTemp = document.getElementById('ready-template').content;
+    let modeAlert = document.querySelectorAll('.alerts')[1];
+    let difficultyAlert = document.querySelectorAll('.alerts')[2];
+    const nameAside = document.getElementById("name__aside");
+    const gameAside = document.getElementById("game__aside");
+    const levelAside = document.getElementById("level__aside");
 
-    document.querySelector('main').appendChild(readyTemp.cloneNode(true));
+    if (nameAside.innerHTML == '-') {
+        console.log('false');
+    } else if (gameAside.innerHTML == '-') {
+        modeAlert.style.visibility = 'visible';
+    } else if (levelAside.innerHTML == '-') {
+        difficultyAlert.style.visibility = 'visible';
+    } else if (gameAside.innerHTML != '-' && levelAside.innerHTML != '-' && levelAside.innerHTML != '-') {
+        document.querySelector('main').innerHTML = "";
+        document.querySelector('main').appendChild(readyTemp.cloneNode(true));
+        contador();
+    }
 };
 
+
 document.getElementById('start__btn').addEventListener('click', toReady);
-document.getElementById('start__btn').addEventListener('click', contador);
+/* document.getElementById('start__btn').addEventListener('click', contador); */
