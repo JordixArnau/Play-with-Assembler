@@ -70,15 +70,18 @@ function checkMode(event) {
     const fase1Btn = document.getElementById("fase1__btn");
     const fase2Btn = document.getElementById("fase2__btn");
     const gameAside = document.getElementById("game__aside");
+    let modeAlert = document.querySelectorAll('.alerts')[1];
 
     if (event.target.value == "Phase 1") {
         gameAside.innerHTML = "Phase 1";
         fase2Btn.style.backgroundColor = 'white';
         fase1Btn.style.backgroundColor = '#C29F13';
+        modeAlert.style.visibility = 'hidden';
     } else if  (event.target.value == "Phase 2") {
         gameAside.innerHTML = "Phase 2";
         fase1Btn.style.backgroundColor = 'white';
         fase2Btn.style.backgroundColor = '#C29F13';
+        modeAlert.style.visibility = 'hidden';
     }
 }
 
@@ -88,22 +91,26 @@ function checkDifficulty(e) {
     const mediumBtn = document.getElementById("medium__level__btn");
     const hardBtn = document.getElementById("hard__level__btn");
     const levelAside = document.getElementById("level__aside");
+    let difficultyAlert = document.querySelectorAll('.alerts')[2];
 
     if (e.target.innerHTML == "Easy") {
         levelAside.innerHTML = "Easy";
         mediumBtn.style.backgroundColor = 'white';
         hardBtn.style.backgroundColor = 'white';
         lowBtn.style.backgroundColor = '#C29F13';
+        difficultyAlert.style.visibility = 'hidden';
     } else if  (e.target.innerHTML == "Normal") {
         levelAside.innerHTML = "Normal";
         lowBtn.style.backgroundColor = 'white';
         hardBtn.style.backgroundColor = 'white';
         mediumBtn.style.backgroundColor = '#C29F13';
+        difficultyAlert.style.visibility = 'hidden';
     } else if  (e.target.innerHTML == "Hard") {
         levelAside.innerHTML = "Hard";
         lowBtn.style.backgroundColor = 'white';
         mediumBtn.style.backgroundColor = 'white';
         hardBtn.style.backgroundColor = '#C29F13';
+        difficultyAlert.style.visibility = 'hidden';
     }
 }
 
@@ -166,6 +173,7 @@ function contador (){
 //Function to start the selected phase of the game going through the ready section
 function toReady() {
     let readyTemp = document.getElementById('ready-template').content;
+    let nameAlert = document.querySelectorAll('.alerts')[0];
     let modeAlert = document.querySelectorAll('.alerts')[1];
     let difficultyAlert = document.querySelectorAll('.alerts')[2];
     const nameAside = document.getElementById("name__aside");
@@ -173,12 +181,18 @@ function toReady() {
     const levelAside = document.getElementById("level__aside");
 
     if (nameAside.innerHTML == '-') {
-        console.log('false');
-    } else if (gameAside.innerHTML == '-') {
+        nameAlert.style.visibility = 'visible';
+    }
+
+    if (gameAside.innerHTML == '-') {
         modeAlert.style.visibility = 'visible';
-    } else if (levelAside.innerHTML == '-') {
+    }
+
+    if (levelAside.innerHTML == '-') {
         difficultyAlert.style.visibility = 'visible';
-    } else if (gameAside.innerHTML != '-' && levelAside.innerHTML != '-' && levelAside.innerHTML != '-') {
+    }
+
+    if (gameAside.innerHTML != '-' && levelAside.innerHTML != '-' && levelAside.innerHTML != '-') {
         document.querySelector('main').innerHTML = "";
         document.querySelector('main').appendChild(readyTemp.cloneNode(true));
         contador();
