@@ -21,6 +21,7 @@ body {
 
 h2 {
     margin: 10px 0;
+    color: rgb(216, 216, 216);
 }
 
 h3 {
@@ -33,8 +34,8 @@ h3 {
 header {
     width: 100%;
     height: 10vh;
-    background-color: #02123C;
-    opacity: 0;
+    background-color: #02123c00;
+    border: solid 1 px white;
 }
 
 /*** MAIN ***/
@@ -54,23 +55,35 @@ aside {
     width: 20%;
     padding: 10px;
     height: 75vh;
-    background-color: #C29F13;
-    border-radius: 15px;
+    background-color: #fd569cc4;
+    border-radius: 5px;
     padding: 25px;
     font-size: 2em;
-    opacity: .8;
+    border: white solid 4px;
+    overflow: hidden;
 }
 
 /*** TEMPLATE DIVS ***/
 
-#startDisplay, #easyMode, #normalMode, #finishDisplay {
+#easyMode, #normalMode, #finishDisplay {
     width: 90%;
     height: 55vh;
     padding: 5%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     border-radius: 15px;
     color: white;
     font-size: 2em;
+}
+
+#startDisplay{
+    width: 90%;
+    height: 55vh;
+    padding: 5%;
+    background-color: rgba(164, 255, 255, 0.781);
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+    border: white solid 4px;
 }
 
 /*** START TEMPLATE ***/
@@ -80,14 +93,21 @@ aside {
     max-width: 150px;
     padding: 5px;
     font-size: .8em;
-    margin-top: 35px;
+    margin-top: 0px;
     font-family: 'VT323', monospace;
+    background-color: #FF4D80;
+    color: aliceblue;
+}
+
+#startDisplay button:hover {
+    background-color: #800327;
+    color: aliceblue;
 }
 
 #startDisplay input {
     padding: 5px;
     font-size: .8em;
-    margin-top: 35px;
+    margin-top: 0px;
     font-family: 'VT323', monospace;
 }
 
@@ -95,6 +115,7 @@ aside {
     display: inline-block;
     visibility: hidden;
     color: red;
+    margin-left: 10px;
 }
 
 /*** Easy Game ***/
@@ -229,9 +250,6 @@ footer button {
 
 
 /*TODO Aqui ha trabajado el wey del ERICK*/
-.bad__imput{
-    border: red solid 4px;
-}
 
 .number__count{
     position: absolute;
@@ -241,15 +259,15 @@ footer button {
     height: 100px;
     animation: scale-number 1s linear;
     transform-origin: 130px center;
+    opacity: .8;
 }
 
+/* Apago el display primero para después encender cada numero en su respectivo momento mediante JS*/
 #number-0{
     display: none;
-
 }
 #number-1{
     display: none;
-
 }
 #number-2{
     display: none;
@@ -258,7 +276,95 @@ footer button {
     display: none;
 }
 
+/* Con esto hago la animación básica de numero creciente*/
 @keyframes scale-number{
     0%{transform: scale(.5);}
     100%{transform: scale(1);}
 }
+
+#start__btn{
+    width: 200px;
+    height: 50px;
+    margin-left: 40%;
+}
+
+.form__group{
+    margin-bottom: 10px;
+}
+
+.form__input__group{
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#espada-gif{
+    width: 7%;
+    height: 7%;
+    margin-right: 20px;
+}
+
+#ghost-gif{
+    width: 7%;
+    height: 7%;
+    margin-right: 20px;
+}
+
+#github-gif{
+    width: 7%;
+    height: 7%;
+    margin-right: 20px;
+}
+
+#cat-gif{
+    width: 7%;
+    height: 7%;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.diamonds{
+    border-left: white solid 4px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 54px;
+    top: 100px;
+    width: 100px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.diamonds div img{
+    width: 380%;
+    overflow: hidden;
+}
+
+.diamonds div{
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+#beer-1{
+    transform: translateX(0px);
+}
+#beer-2{
+    transform: translateX(-85px);
+}
+#beer-3{
+    transform: translateX(-170px);
+}
+#beer-4{
+    transform: translateY(-125px);
+}
+#beer-5{
+    transform: translate(-85px, -125px);
+}
+#beer-6{
+    transform: translate(-260px, 0px);
+}
+

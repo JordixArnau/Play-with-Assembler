@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/stylesheet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" type="image/png" href="Assets/imgs/original.gif"> <!--El favicon-->
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Play with assembler</title>
 </head>
 <body>
     <header>
+        <div class="logo" id="logo">
+            <img src="Assets/imgs/blue-ghost.gif" id="cat-gif"></img>
+
+        </div>
 
     </header>
 
@@ -32,6 +37,26 @@
         <h3 id="rank1st">Sebas - 1000p</h3>
         <h3 id="rank2nd">Erick - 999p</h3>
         <h3 id="rank3st">Hugo - 998p</h3>
+        <div class="diamonds">
+            <div>
+                <img src="Assets/imgs/bebidas-algoholicas.gif" id="beer-1"></img>
+            </div>
+            <div>
+                <img src="Assets/imgs/bebidas-algoholicas.gif" id="beer-2"></img>
+            </div>
+            <div>
+                <img src="Assets/imgs/bebidas-algoholicas.gif" id="beer-3"></img>
+            </div>
+            <div>
+                <img src="Assets/imgs/bebidas-algoholicas.gif" id="beer-4"></img>
+            </div>
+            <div>
+                <img src="Assets/imgs/bebidas-algoholicas.gif" id="beer-5"></img>
+            </div>
+            <div>
+                <img src="Assets/imgs/bebidas-algoholicas.gif" id="beer-6"></img>
+            </div>
+        </div>
 
     </aside>
 
@@ -51,20 +76,20 @@
             <div class="form__group" id="group__name">
 				<label for="name" class="form__label">Name:</label>
 				<div class="form__input__group">
-					<i class="fas fa-biking"></i>
+                    <img src="Assets/imgs/espada.gif" id="espada-gif"></img>
+					<!-- <i class="fas fa-biking"></i> -->
 					<input type="text" class="form__input"	id="name__player" name="name__player" placeholder="Your name wey">
+                    <!-- Frase que saldrá si no escribes un nombre -->
                     <p class="alerts">Debes añadir un nombre</p>
                 </div>
-
-                <!-- Frase que saldrá si no escribes un nombre -->
-			    
 		    </div>
 
 				<!-- Tipo de juego -->
 				<div class="form__group" id="group__game">
 					<label for="name" class="form__label">Game:</label>
 					<div class="form__input__group">
-						<i class="fab fa-android"></i>
+						<img src="Assets/imgs/ghost.gif" id="ghost-gif"></img>
+                        <!-- <i class="fab fa-android"></i> -->
 						<button class="fase1__btn" id="fase1__btn" value="Phase 1">Phase 1</button>
 						<button class="fase2__btn" id="fase2__btn" value="Phase 2" >Phase 2</button>
                         <p class="alerts">Seleccione un tipo de juego</p>
@@ -75,7 +100,8 @@
 				<div class="form__group" id="group__level">
 					<label for="name" class="form__label">Level:</label>
 					<div class="form__input__group">
-						<i class="fab fa-angellist"></i>
+                        <img src="Assets/imgs/github-cat.gif" id="github-gif"></img>
+						<!-- <i class="fab fa-angellist"></i> -->
 						<button class="low__level__btn" id="low__level__btn">Easy</button>
 						<button class="medium__level__btn" id="medium__level__btn">Normal</button>
 						<button class="hard__level__btn" id="hard__level__btn">Hard</button>

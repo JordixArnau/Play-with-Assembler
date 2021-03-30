@@ -72,7 +72,7 @@ function checkMode(event) {
     const fase2Btn = document.getElementById("fase2__btn");
     let modeAlert = document.querySelectorAll('.alerts')[1];
     const gameAside = document.getElementById("game__aside");
-    
+
     if (event.target.value == "Phase 1") {
         gameAside.innerHTML = "Phase 1";
     } else if  (event.target.value == "Phase 2") {
@@ -96,7 +96,7 @@ function sendForm (){
     const startBtn = document.getElementById("start__btn");
     /* Divs donde se pondrán los nombres*/
     const nameAside = document.getElementById("name__aside");
-    
+
     const levelAside = document.getElementById("level__aside");
 
     /* Regex para el nombre */
@@ -129,10 +129,10 @@ function sendForm (){
         nameAside.innerHTML = nameInput.value;
 
     };
-    /* El evento BLUR se ejecutará cuando se haga click fuera del input */
+
 };
 
-
+/* El evento BLUR se ejecutará cuando se haga click fuera del input */
 document.getElementById("name__player").addEventListener('blur', checkName);
 document.getElementById("name__player").addEventListener('keyup', checkName);
 
