@@ -7,7 +7,7 @@ function start() {
     document.querySelector('main').appendChild(startTemp.cloneNode(true));
 }
 
- start();
+document.getElementById('footStart').addEventListener('click', start);
 
 function phase1() {
     document.querySelector('main').innerHTML = "";
@@ -33,7 +33,7 @@ function finish() {
     document.getElementById('result').innerHTML = startNumber;
 }
 
-/* phase2(); */
+document.getElementById('footFinish').addEventListener('click', finish);
 
 
 /*---------------------------------------
@@ -85,8 +85,8 @@ function sendForm (){
     const formValidate = (e) => {
         // e.target.name;
         // if(nameRegex.test(e.target.value)){}
-        
-        
+
+
         nameAside.innerHTML = nameInput.value;
 
     };

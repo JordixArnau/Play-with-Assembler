@@ -53,11 +53,11 @@ main {
 aside {
     width: 20%;
     padding: 10px;
-    height: 70vh;
+    height: 75vh;
     background-color: #C29F13;
     border-radius: 15px;
     padding: 25px;
-    font-size: 1.5em;
+    font-size: 2em;
     opacity: .8;
 }
 
@@ -70,7 +70,7 @@ aside {
     background-color: black;
     border-radius: 15px;
     color: white;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 /*** Easy Game ***/
