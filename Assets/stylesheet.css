@@ -66,7 +66,7 @@ aside {
 #startDisplay, #easyMode, #normalMode, #finishDisplay {
     width: 90%;
     height: 55vh;
-    padding: 5%;
+    padding: 1%;
     background-color: black;
     border-radius: 15px;
     color: white;
@@ -125,6 +125,10 @@ aside {
 /*** Normal Mode ***/
 
 #normalMode .container{
+    background-image: url('imgs/james-doyle-1-1.gif');
+    /* background-image: url('imgs/22b22287602523.5dbd29081561d.gif'); */
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0px;
     padding: 0px;
     background-color: #FF4D80;
@@ -148,12 +152,16 @@ aside {
 }
 
 .target-item{
-    background-color: #fed766;
+    /* background-color: #fed766; */
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FF4D80;
+}
+
+.target-item img{
+    width: 30%;
 }
 
 /*** FINISH TEMPLATE ***/
