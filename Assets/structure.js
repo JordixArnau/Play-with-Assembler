@@ -17,6 +17,7 @@ function ready() {
 }
 
 document.getElementById('readyBtn').addEventListener('click', ready);
+document.getElementById('readyBtn').addEventListener('click', contador);
 
 function phase1() {
     document.querySelector('main').innerHTML = "";
@@ -108,6 +109,36 @@ function sendForm (){
     });
 
 };
+
+function contador (){
+
+    /* Pescando los diferentes numeros */
+    const number3 = document.getElementById("number-3");
+    const number2 = document.getElementById("number-2");
+    const number1 = document.getElementById("number-1");
+    const number0 = document.getElementById("number-0");
+
+    /* Usando el Set timeout enciendo el div contenedor del numero exacto que quiero que se vea en pantalla. */
+    setTimeout(() =>{
+        number3.style.display = "block";
+    },1000);
+    setTimeout(() =>{
+        number2.style.display = "block";
+        number3.style.display = "none";
+    },2000);
+    setTimeout(() =>{
+        number1.style.display = "block";
+        number2.style.display = "none";
+    },3000);
+    setTimeout(() =>{
+        number0.style.display = "block";
+        number1.style.display = "none";
+    },4000);
+    setTimeout(() =>{
+        number0.style.display = "none";
+    },5000);
+
+}
 
 
 
