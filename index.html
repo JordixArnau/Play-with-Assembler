@@ -29,9 +29,9 @@
         <h2>Score</h2>
             <p id="output-box">-</p>
         <h2>Ranking</h2>
-        <h3 id="rank1st">Sebas - 1000p</h3>
-        <h3 id="rank2nd">Erick - 999p</h3>
-        <h3 id="rank3st">Hugo - 998p</h3>
+        <h3 id="rank1st">-</h3>
+        <h3 id="rank2nd">-</h3>
+        <h3 id="rank3rd">-</h3>
 
     </aside>
 
@@ -41,6 +41,7 @@
         <button id="footPhase2">NORMAL</button>
         <button id="footFinish">FINISH</button>
         <button id="readyBtn">ready</button>
+        <div id="timerCount"></div>
     </footer>
 
     <!-- Starting page -->
@@ -107,7 +108,6 @@
                 <img src="Assets/imgs/0.png" alt="0">
             </div>
         </div>
-        <script src="js/ready.js"></script>
     </template>
 
     <!-- Easy mode of the game -->
@@ -116,6 +116,7 @@
             <div id="game-box"><p class="click-here-text" id="click-here-text">Click here</p></div>
         </div>
         <script src="js/easy-mode.js"></script>
+        <script src="js/timer.js"></script>
         </template>
 
     <!-- Normal mode of the game -->
@@ -152,6 +153,7 @@
             </div>
         </div>
         <script src="js/normal-mode.js"></script>
+        <script src="js/timer.js"></script>
     </template>
 
     <!-- Finish template -->
@@ -168,6 +170,7 @@
     </template>
 
     <script src="assets/structure.js"></script>
+    <script src="js/ranking.js"></script>
 	<script src="https://kit.fontawesome.com/608455c295.js" crossorigin="anonymous"></script>
 </body>
 </html>
