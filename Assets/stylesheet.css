@@ -211,7 +211,17 @@ footer button {
     font-size: 1.5em;
     margin-right: 15px;
 }
-
+#timerCount{
+    display: flex;
+    font-size: 50px;
+    height: 80px;
+    width: 80px;
+    background-color: #C29F13;
+    opacity: .8;
+    border-radius: 40%;
+    align-items: center;
+    justify-content: center;
+}
 /*** General Classes ***/
 
 .all-buttons{
