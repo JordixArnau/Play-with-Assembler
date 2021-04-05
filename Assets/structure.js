@@ -115,6 +115,7 @@ function checkDifficulty(e) {
     }
 }
 
+/* El evento BLUR se ejecutará cuando se haga click fuera del input */
 document.getElementById("name__player").addEventListener('blur', checkName);
 document.getElementById("name__player").addEventListener('keyup', checkName);
 
