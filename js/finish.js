@@ -3,13 +3,13 @@ tryAgainButton = document.getElementById('tryagain-button');
 homingButton = document.getElementById('homing-button');
 userMode = document.getElementById('game__aside').innerText;
 
-// countDown = undefined;
-// countDown.remove();
-
 homingButton.addEventListener('click', function(){
-    nameAside.innerHTML = nameInput;
-    modeAlert.style.visibility = 'hidden';
 
+    nameAside.innerHTML = "-";
+    gameAside.innerHTML = "-";
+    levelAside.innerHTML = "-";
+    document.getElementById('output-box').innerHTML = "-";
+    
     start();
 });
 tryAgainButton.addEventListener('click', function(){

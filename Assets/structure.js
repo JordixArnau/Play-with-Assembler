@@ -50,12 +50,17 @@ document.getElementById('footFinish').addEventListener('click', finish);
 /*---------------------------------------
 --------------- ERICK FORMS -------------
 -----------------------------------------*/
+/*Getting aside elements by id*/
+let nameAside = document.getElementById("name__aside");
+let gameAside = document.getElementById("game__aside");
+let levelAside = document.getElementById("level__aside");
+
+
 
 function checkName() {
     /* Pescando los IDs del html */
     const nameInput = document.getElementById("name__player").value;
     let nameAlert = document.querySelectorAll('.alerts')[0];
-    const nameAside = document.getElementById("name__aside");
 
     if (nameInput == "") {
         nameAlert.style.visibility = 'visible';
@@ -70,7 +75,6 @@ function checkMode(event) {
     /* Botones que seleccionan el JUEGO*/
     const fase1Btn = document.getElementById("fase1__btn");
     const fase2Btn = document.getElementById("fase2__btn");
-    const gameAside = document.getElementById("game__aside");
     let modeAlert = document.querySelectorAll('.alerts')[1];
 
     if (event.target.value == "Phase 1") {
@@ -91,7 +95,6 @@ function checkDifficulty(e) {
     const lowBtn = document.getElementById("low__level__btn");
     const mediumBtn = document.getElementById("medium__level__btn");
     const hardBtn = document.getElementById("hard__level__btn");
-    const levelAside = document.getElementById("level__aside");
     let difficultyAlert = document.querySelectorAll('.alerts')[2];
 
     if (e.target.innerHTML == "Easy") {
@@ -128,17 +131,17 @@ document.getElementById("hard__level__btn").addEventListener('click', checkDiffi
 
 document.getElementById("start__btn").addEventListener('click', toReady);
 
-//Easy games variables
+//Phase 1 game global variables
 let countDown = document.querySelector("#timerCount");
 let maxTime = 9;
 let intervalValue = maxTime;
 let intervalCountdown = null;
 
-//Normal game variables
+//Phase 2 game global variables
 let oldTarget = document.querySelector('.target-item');
 
 
-//Finish page variables
+//Finish page global variables
 let tryAgainButton = document.getElementById('tryagain-button');
 let homingButton = document.getElementById('homing-button');
 let userMode = document.getElementById('game__aside').innerText;
