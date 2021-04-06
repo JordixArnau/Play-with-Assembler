@@ -42,6 +42,7 @@ function finish() {
     document.querySelector('main').appendChild(finishTemp.cloneNode(true));
     document.getElementById('result').innerHTML = startNumber;
     rankingCount(rank, rankMode);
+    document.removeEventListener('keyup', keyboardMode);
     setTimeout(() => {
         document.querySelectorAll('#finishDisplay button')[0].style.opacity = '1';
         document.querySelectorAll('#finishDisplay button')[0].style.visibility = 'visible';
@@ -77,6 +78,7 @@ function checkMode(event) {
     const fase1Btn = document.getElementById("fase1__btn");
     const fase2Btn = document.getElementById("fase2__btn");
     const gameAside = document.getElementById("game__aside");
+    let level = document.getElementById('group__level');
     let modeAlert = document.querySelectorAll('.alerts')[1];
 
     if (event.target.value == "Phase 1") {
@@ -84,40 +86,41 @@ function checkMode(event) {
         fase2Btn.style.backgroundColor = 'white';
         fase1Btn.style.backgroundColor = '#C29F13';
         modeAlert.style.visibility = 'hidden';
+        level.style.visibility = 'visible';
+        document.getElementById("level__aside").innerHTML = '-';
     } else if  (event.target.value == "Phase 2") {
         gameAside.innerHTML = "Phase 2";
         fase1Btn.style.backgroundColor = 'white';
         fase2Btn.style.backgroundColor = '#C29F13';
         modeAlert.style.visibility = 'hidden';
+        level.style.visibility = 'hidden';
+        document.getElementById("level__aside").innerHTML = 'Standard';
     }
 }
 
 function checkDifficulty(e) {
     /* Botones que seleccionan el NIVEL*/
-    const lowBtn = document.getElementById("low__level__btn");
-    const mediumBtn = document.getElementById("medium__level__btn");
-    const hardBtn = document.getElementById("hard__level__btn");
+    const mouseBtn = document.getElementById("mouse_btn");
+    const keyboardBtn = document.getElementById("keyboard_btn");
     const levelAside = document.getElementById("level__aside");
     let difficultyAlert = document.querySelectorAll('.alerts')[2];
+    let explanation = document.querySelectorAll('.explanation');
 
-    if (e.target.innerHTML == "Easy") {
-        levelAside.innerHTML = "Easy";
-        mediumBtn.style.backgroundColor = 'white';
-        hardBtn.style.backgroundColor = 'white';
-        lowBtn.style.backgroundColor = '#C29F13';
-        difficultyAlert.style.visibility = 'hidden';
-    } else if  (e.target.innerHTML == "Normal") {
-        levelAside.innerHTML = "Normal";
-        lowBtn.style.backgroundColor = 'white';
-        hardBtn.style.backgroundColor = 'white';
-        mediumBtn.style.backgroundColor = '#C29F13';
-        difficultyAlert.style.visibility = 'hidden';
-    } else if  (e.target.innerHTML == "Hard") {
-        levelAside.innerHTML = "Hard";
-        lowBtn.style.backgroundColor = 'white';
-        mediumBtn.style.backgroundColor = 'white';
-        hardBtn.style.backgroundColor = '#C29F13';
-        difficultyAlert.style.visibility = 'hidden';
+    if (e.target.innerHTML == "Mouse") {
+        levelAside.innerHTML = "Mouse";
+        keyboardBtn.style.backgroundColor = 'white';
+        mouseBtn.style.backgroundColor = '#C29F13';
+        difficultyAlert.style.display = 'none';
+        explanation[0].style.display = 'inline-block';
+        explanation[1].style.display = 'none';
+
+    } else if  (e.target.innerHTML == "Keyboard") {
+        levelAside.innerHTML = "Keyboard";
+        mouseBtn.style.backgroundColor = 'white';
+        keyboardBtn.style.backgroundColor = '#C29F13';
+        difficultyAlert.style.display = 'none';
+        explanation[1].style.display = 'inline-block';
+        explanation[0].style.display = 'none';
     }
 }
 
@@ -128,9 +131,8 @@ document.getElementById("name__player").addEventListener('keyup', checkName);
 document.getElementById("fase1__btn").addEventListener('click', checkMode);
 document.getElementById("fase2__btn").addEventListener('click', checkMode);
 
-document.getElementById("low__level__btn").addEventListener('click', checkDifficulty);
-document.getElementById("medium__level__btn").addEventListener('click', checkDifficulty);
-document.getElementById("hard__level__btn").addEventListener('click', checkDifficulty);
+document.getElementById("mouse_btn").addEventListener('click', checkDifficulty);
+document.getElementById("keyboard_btn").addEventListener('click', checkDifficulty);
 
 document.getElementById("start__btn").addEventListener('click', toReady);
 
@@ -196,11 +198,11 @@ function toReady() {
         modeAlert.style.visibility = 'visible';
     }
 
-    if (levelAside.innerHTML == '-') {
+    if (levelAside.innerHTML == '-' && document.getElementById('group__level').style.visibility == 'visible') {
         difficultyAlert.style.visibility = 'visible';
     }
 
-    if (gameAside.innerHTML != '-' && levelAside.innerHTML != '-' && levelAside.innerHTML != '-') {
+    if (gameAside.innerHTML != '-' && nameAside.innerHTML != '-' && levelAside.innerHTML != '-') {
         document.querySelector('main').innerHTML = "";
         document.querySelector('main').appendChild(readyTemp.cloneNode(true));
         contador();

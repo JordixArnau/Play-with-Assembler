@@ -120,6 +120,16 @@ aside {
     margin-left: 10px;
 }
 
+.explanation {
+    display: inline-block;
+    display: none;
+    margin-left: 10px;
+}
+
+#group__level {
+    visibility: hidden;
+}
+
 /*** Easy Game ***/
 #easyMode{
     display: flex;
