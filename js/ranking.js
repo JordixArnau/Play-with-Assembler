@@ -1,16 +1,19 @@
 let rankMode = '-';
+let rankLevel = '-';
 let rank = [];
 
 function rankingCount() {
     let userName = document.getElementById('name__aside').innerHTML;
     let userMode = document.getElementById('game__aside').innerHTML;
+    let userLevel = document.getElementById('level__aside').innerHTML;
     let userScore = startNumber;
 
     //If the user is playing in the same mode, the rank will prevail.
     //If not, we will reset the rank
 
-    if (rankMode != userMode) {
+    if (rankMode != userMode || rankLevel != userLevel) {
         rankMode = userMode;
+        rankLevel = userLevel;
         rank = [];
         document.getElementById('rank1st').innerHTML = '-';
         document.getElementById('rank2nd').innerHTML = '-';
