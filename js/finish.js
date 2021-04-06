@@ -1,10 +1,12 @@
 /****Finish page buttons****/
+
+/***Getting DOM elements ***/
 tryAgainButton = document.getElementById('tryagain-button');
 homingButton = document.getElementById('homing-button');
 userMode = document.getElementById('game__aside').innerText;
 
+/*** ***/
 homingButton.addEventListener('click', function(){
-
     nameAside.innerHTML = "-";
     gameAside.innerHTML = "-";
     levelAside.innerHTML = "-";

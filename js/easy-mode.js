@@ -10,10 +10,5 @@ clickButton.addEventListener('click', addToNumber);
 
 function addToNumber(){
 	myOutput.innerHTML = `Current score: ${1+startNumber++}`;
-	
 }
-
- function goBack() {
-    window.history.back();
-  }
 
