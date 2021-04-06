@@ -58,7 +58,7 @@ aside {
     background-color: #fd569cc4;
     border-radius: 5px;
     padding: 25px;
-    font-size: 100%;
+    font-size: 150%;
     border: white solid 4px;
 }
 
@@ -249,6 +249,7 @@ footer  {
 }
 
 footer button {
+    display: none;
     padding: 10px;
     height: 40px;
     font-size: 1.5em;
@@ -261,10 +262,11 @@ footer button {
     width: 80px;
     background-color: #C29F13;
     opacity: .8;
-    border-radius: 40%;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
 }
+
 /*** General Classes ***/
 
 .all-buttons{
@@ -315,9 +317,11 @@ footer button {
 }
 
 #start__btn{
-    width: 200px;
-    height: 50px;
-    margin-left: 40%;
+    position: absolute;
+    top: 85vh;
+    left: 45vw;
+    width: 300px;
+    height: 80px;
 }
 
 .form__group{
