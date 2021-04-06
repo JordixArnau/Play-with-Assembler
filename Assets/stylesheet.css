@@ -58,9 +58,8 @@ aside {
     background-color: #fd569cc4;
     border-radius: 5px;
     padding: 25px;
-    font-size: 2em;
+    font-size: 100%;
     border: white solid 4px;
-    overflow: hidden;
 }
 
 /*** TEMPLATE DIVS ***/
@@ -292,7 +291,7 @@ footer button {
     height: 100px;
     animation: scale-number 1s linear;
     transform-origin: 130px center;
-    opacity: .8;
+    opacity: 1;
 }
 
 /* Apago el display primero para después encender cada numero en su respectivo momento mediante JS*/
