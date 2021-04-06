@@ -128,6 +128,12 @@ document.getElementById("hard__level__btn").addEventListener('click', checkDiffi
 
 document.getElementById("start__btn").addEventListener('click', toReady);
 
+//Games variables
+let countDown = document.querySelector("#timerCount");
+let maxTime = 9;
+let intervalValue = maxTime;
+
+
 
 //Function for the countdown before beginning the game
 function contador (){
@@ -203,3 +209,6 @@ function toReady() {
 
 
 document.getElementById('start__btn').addEventListener('click', toReady);
+
+
+
