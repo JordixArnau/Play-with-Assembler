@@ -1,4 +1,4 @@
-/* El evento BLUR se ejecutará cuando se haga click fuera del input */
+/*Setting EventListener file for every time we go home, needed because of templates*/
 document.getElementById("name__player").addEventListener('blur', checkName);
 document.getElementById("name__player").addEventListener('keyup', checkName);
 
