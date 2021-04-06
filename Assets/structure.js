@@ -32,7 +32,7 @@ function finish() {
     let finishTemp = document.getElementById('finish').content;
     document.querySelector('main').appendChild(finishTemp.cloneNode(true));
     document.getElementById('result').innerHTML = startNumber;
-    rankingCount(rank, rankMode);
+    rankingCount();
 
     if (document.getElementById('level__aside').innerHTML == 'Keyboard') {
         document.removeEventListener('keyup', keyboardMode);

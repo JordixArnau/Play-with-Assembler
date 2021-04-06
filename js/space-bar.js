@@ -13,7 +13,7 @@ function spaceBarMode() {
     let level = document.getElementById('level__aside').innerHTML;
 
     if (level == 'Keyboard') {
-        clickButton.removeEventListener('click', addToNumber);
+        document.getElementById("game-box").removeEventListener('click', addToNumber);
         document.addEventListener('keyup', keyboardMode);
     }
 }

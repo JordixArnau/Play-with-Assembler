@@ -1,9 +1,7 @@
+let rankMode = '-';
 let rank = [];
-let rankMode = '';
 
-
-
-function rankingCount(rank, rankMode) {
+function rankingCount() {
     let userName = document.getElementById('name__aside').innerHTML;
     let userMode = document.getElementById('game__aside').innerHTML;
     let userScore = startNumber;
@@ -11,11 +9,12 @@ function rankingCount(rank, rankMode) {
     //If the user is playing in the same mode, the rank will prevail.
     //If not, we will reset the rank
 
-    if (rankMode == '') {
-        rankMode = userMode;
-    } else if (rankMode != userMode) {
+    if (rankMode != userMode) {
         rankMode = userMode;
         rank = [];
+        document.getElementById('rank1st').innerHTML = '-';
+        document.getElementById('rank2nd').innerHTML = '-';
+        document.getElementById('rank3rd').innerHTML = '-';
     }
 
     let tempArr = [userName, userScore]
@@ -30,9 +29,8 @@ function rankingCount(rank, rankMode) {
     if (rank.length == 2){
         document.getElementById('rank2nd').innerHTML = rank[1][0] + ' - ' + rank[1][1];
     } else if (rank.length > 2) {
+        document.getElementById('rank2nd').innerHTML = rank[1][0] + ' - ' + rank[1][1];
         document.getElementById('rank3rd').innerHTML = rank[2][0] + ' - ' + rank[2][1];
     }
 
-
-    return rank;
 }
