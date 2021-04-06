@@ -131,6 +131,7 @@ aside {
 
 /*** Easy Game ***/
 #easyMode{
+    background-image: url('imgs/bg-01.gif');
     display: flex;
     flex-direction:column ;
     justify-content: space-between;
@@ -139,14 +140,21 @@ aside {
 
 #game-box{
     display: flex;
-    height: 200px;
-    width: 200px;
+    height: 125px;
+    width: 150px;
     margin-top: 120px;
     align-items: center;
     justify-content: center;
-    background-color: #fed766;
-    color: #FF4D80;
+    /* background-color: #fed766; */
+    /* color: #FF4D80; */
+    overflow: hidden;
     cursor: url('imgs/nyanCat_right.png'), auto;
+}
+
+#game-box img{
+    transform: translate(-150px, 60px);
+    width: 250%;
+    object-fit: cover;
 }
 
 /*** Normal Mode ***/
