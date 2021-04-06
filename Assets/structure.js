@@ -7,8 +7,6 @@ function start() {
 }
 
 start();
-document.getElementById('footStart').addEventListener('click', start);
-
 
 function ready() {
     document.querySelector('main').innerHTML = "";
@@ -16,24 +14,17 @@ function ready() {
     document.querySelector('main').appendChild(readyTemp.cloneNode(true));
 }
 
-document.getElementById('readyBtn').addEventListener('click', ready);
-document.getElementById('readyBtn').addEventListener('click', contador);
-
 function phase1() {
     document.querySelector('main').innerHTML = "";
     let phase1Temp = document.getElementById('phase1').content;
     document.querySelector('main').appendChild(phase1Temp.cloneNode(true));
 }
 
-document.getElementById('footPhase1').addEventListener('click', phase1);
-
 function phase2() {
     document.querySelector('main').innerHTML = "";
     let phase2Temp = document.getElementById('phase2').content;
     document.querySelector('main').appendChild(phase2Temp.cloneNode(true));
 }
-
-document.getElementById('footPhase2').addEventListener('click', phase2);
 
 
 function finish() {
@@ -42,7 +33,11 @@ function finish() {
     document.querySelector('main').appendChild(finishTemp.cloneNode(true));
     document.getElementById('result').innerHTML = startNumber;
     rankingCount(rank, rankMode);
-    document.removeEventListener('keyup', keyboardMode);
+
+    if (document.getElementById('level__aside').innerHTML == 'Keyboard') {
+        document.removeEventListener('keyup', keyboardMode);
+    }
+
     setTimeout(() => {
         document.querySelectorAll('#finishDisplay button')[0].style.opacity = '1';
         document.querySelectorAll('#finishDisplay button')[0].style.visibility = 'visible';
@@ -50,8 +45,6 @@ function finish() {
         document.querySelectorAll('#finishDisplay button')[1].style.visibility = 'visible';
     }, 5000);
 }
-
-document.getElementById('footFinish').addEventListener('click', finish);
 
 
 /*---------------------------------------
