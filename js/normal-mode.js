@@ -6,7 +6,7 @@ var startNumber = 0;
 var clickButton = document.getElementById("game-box-normal");
 
 /* #### Normal Mode Variables######*/
-let oldTarget = document.querySelector('.target-item');
+oldTarget = document.querySelector('.target-item');
 
 oldTarget.addEventListener('click', normalGame);
 oldTarget.addEventListener('click', addToNumber);

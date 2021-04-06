@@ -57,12 +57,17 @@ document.getElementById('footFinish').addEventListener('click', finish);
 /*---------------------------------------
 --------------- ERICK FORMS -------------
 -----------------------------------------*/
+/*Getting aside elements by id*/
+let nameAside = document.getElementById("name__aside");
+let gameAside = document.getElementById("game__aside");
+let levelAside = document.getElementById("level__aside");
+
+
 
 function checkName() {
     /* Pescando los IDs del html */
     const nameInput = document.getElementById("name__player").value;
     let nameAlert = document.querySelectorAll('.alerts')[0];
-    const nameAside = document.getElementById("name__aside");
 
     if (nameInput == "") {
         nameAlert.style.visibility = 'visible';
@@ -136,6 +141,20 @@ document.getElementById("keyboard_btn").addEventListener('click', checkDifficult
 
 document.getElementById("start__btn").addEventListener('click', toReady);
 
+//Phase 1 game global variables
+let countDown = document.querySelector("#timerCount");
+let maxTime = 9;
+let intervalValue = maxTime;
+let intervalCountdown = null;
+
+//Phase 2 game global variables
+let oldTarget = document.querySelector('.target-item');
+
+
+//Finish page global variables
+let tryAgainButton = document.getElementById('tryagain-button');
+let homingButton = document.getElementById('homing-button');
+let userMode = document.getElementById('game__aside').innerText;
 
 //Function for the countdown before beginning the game
 function contador (){
@@ -211,3 +230,6 @@ function toReady() {
 
 
 document.getElementById('start__btn').addEventListener('click', toReady);
+
+
+
