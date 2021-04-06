@@ -141,19 +141,20 @@ aside {
 #game-box{
     display: flex;
     height: 125px;
-    width: 150px;
+    width: 100px;
     margin-top: 120px;
     align-items: center;
     justify-content: center;
-    /* background-color: #fed766; */
-    /* color: #FF4D80; */
     overflow: hidden;
     cursor: url('imgs/nyanCat_right.png'), auto;
+    transform: scale(2);
+    border: solid 5px black;
+    border-radius: 5px;
 }
 
 #game-box img{
-    transform: translate(-150px, 60px);
-    width: 250%;
+    transform: translate(-130px, 60px);
+    width: 375px;
     object-fit: cover;
 }
 
