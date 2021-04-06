@@ -1,7 +1,8 @@
 countDown.style.display = "flex";
 countDown.innerHTML = "10";
+intervalValue = maxTime;
 
-let intervalCountdown = setInterval(function () {
+intervalCountdown = setInterval(function () {
     countDown.innerHTML = intervalValue.toString();
     intervalValue--;
     if (intervalValue == -1) {
@@ -10,6 +11,7 @@ let intervalCountdown = setInterval(function () {
         finish();
     }
 },1000);
+
 
 
 

@@ -128,12 +128,20 @@ document.getElementById("hard__level__btn").addEventListener('click', checkDiffi
 
 document.getElementById("start__btn").addEventListener('click', toReady);
 
-//Games variables
+//Easy games variables
 let countDown = document.querySelector("#timerCount");
 let maxTime = 9;
 let intervalValue = maxTime;
+let intervalCountdown = null;
+
+//Normal game variables
+let oldTarget = document.querySelector('.target-item');
 
 
+//Finish page variables
+let tryAgainButton = document.getElementById('tryagain-button');
+let homingButton = document.getElementById('homing-button');
+let userMode = document.getElementById('game__aside').innerText;
 
 //Function for the countdown before beginning the game
 function contador (){
