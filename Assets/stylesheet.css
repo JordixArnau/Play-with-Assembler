@@ -102,7 +102,7 @@ aside {
 
 #startDisplay button:hover {
     background-color: #800327;
-    color: aliceblue;
+    color: rgb(175, 189, 201);
 }
 
 #startDisplay input {

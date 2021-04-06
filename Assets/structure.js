@@ -82,6 +82,7 @@ function checkMode(event) {
     if (event.target.value == "Phase 1") {
         gameAside.innerHTML = "Phase 1";
         fase2Btn.style.backgroundColor = 'white';
+        fase2Btn.style.color = 'black';
         fase1Btn.style.backgroundColor = '#C29F13';
         modeAlert.style.visibility = 'hidden';
         level.style.visibility = 'visible';
@@ -89,6 +90,7 @@ function checkMode(event) {
     } else if  (event.target.value == "Phase 2") {
         gameAside.innerHTML = "Phase 2";
         fase1Btn.style.backgroundColor = 'white';
+        fase1Btn.style.color = 'black';
         fase2Btn.style.backgroundColor = '#C29F13';
         modeAlert.style.visibility = 'hidden';
         level.style.visibility = 'hidden';
@@ -107,6 +109,7 @@ function checkDifficulty(e) {
     if (e.target.innerHTML == "Mouse") {
         levelAside.innerHTML = "Mouse";
         keyboardBtn.style.backgroundColor = 'white';
+        keyboardBtn.style.color = 'black';
         mouseBtn.style.backgroundColor = '#C29F13';
         difficultyAlert.style.display = 'none';
         explanation[0].style.display = 'inline-block';
@@ -115,6 +118,7 @@ function checkDifficulty(e) {
     } else if  (e.target.innerHTML == "Keyboard") {
         levelAside.innerHTML = "Keyboard";
         mouseBtn.style.backgroundColor = 'white';
+        mouseBtn.style.color = 'black';
         keyboardBtn.style.backgroundColor = '#C29F13';
         difficultyAlert.style.display = 'none';
         explanation[1].style.display = 'inline-block';
