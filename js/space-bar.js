@@ -12,9 +12,8 @@ function keyboardMode(event) {
 function spaceBarMode() {
     let level = document.getElementById('level__aside').innerHTML;
 
-    clickButton.removeEventListener('click', addToNumber);
-
     if (level == 'Keyboard') {
+        clickButton.removeEventListener('click', addToNumber);
         document.addEventListener('keyup', keyboardMode);
     }
 }
