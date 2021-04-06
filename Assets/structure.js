@@ -42,6 +42,12 @@ function finish() {
     document.querySelector('main').appendChild(finishTemp.cloneNode(true));
     document.getElementById('result').innerHTML = startNumber;
     rankingCount(rank, rankMode);
+    setTimeout(() => {
+        document.querySelectorAll('#finishDisplay button')[0].style.opacity = '1';
+        document.querySelectorAll('#finishDisplay button')[0].style.visibility = 'visible';
+        document.querySelectorAll('#finishDisplay button')[1].style.opacity = '1';
+        document.querySelectorAll('#finishDisplay button')[1].style.visibility = 'visible';
+    }, 5000);
 }
 
 document.getElementById('footFinish').addEventListener('click', finish);

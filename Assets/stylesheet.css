@@ -196,6 +196,9 @@ aside {
     font-size: 1em;
     margin-top: 35px;
     font-family: 'VT323', monospace;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 5s;
 }
 
 #finalScore h3 {
@@ -344,47 +347,3 @@ footer button {
     margin-left: 20px;
     padding-top: 20px;
 }
-
-.diamonds{
-    border-left: white solid 4px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    right: 54px;
-    top: 100px;
-    width: 100px;
-    height: fit-content;
-    overflow: hidden;
-}
-
-.diamonds div img{
-    width: 380%;
-    overflow: hidden;
-}
-
-.diamonds div{
-    height: 120px;
-    width: 100%;
-    overflow: hidden;
-    overflow: hidden;
-}
-
-#beer-1{
-    transform: translateX(0px);
-}
-#beer-2{
-    transform: translateX(-85px);
-}
-#beer-3{
-    transform: translateX(-170px);
-}
-#beer-4{
-    transform: translateY(-125px);
-}
-#beer-5{
-    transform: translate(-85px, -125px);
-}
-#beer-6{
-    transform: translate(-260px, 0px);
-}
-
